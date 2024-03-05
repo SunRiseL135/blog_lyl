@@ -1,6 +1,8 @@
+https://sunrisel135.github.io/blog_lyl/2024/03/05/Java%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80/
 https://sunrisel135.github.io/blog_lyl/tags/index.html
 https://sunrisel135.github.io/blog_lyl/about/index.html
 https://sunrisel135.github.io/blog_lyl/categories/index.html
 https://sunrisel135.github.io/blog_lyl/2024/03/04/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/
 https://sunrisel135.github.io/blog_lyl/2024/03/04/hello-world/
 https://sunrisel135.github.io/blog_lyl
+https://sunrisel135.github.io/blog_lyl/tags/%E6%8C%81%E7%BB%AD%E8%A1%A5%E5%85%85/
