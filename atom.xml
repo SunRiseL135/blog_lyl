@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>blog_lyl</title>
   
   
   <link href="https://sunrisel135.github.io/blog_lyl/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://sunrisel135.github.io/blog_lyl/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>lyl_L-</name>
     
   </author>
   
