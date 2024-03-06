@@ -5,6 +5,5 @@ https://sunrisel135.github.io/blog_lyl/tags/index.html
 https://sunrisel135.github.io/blog_lyl/about/index.html
 https://sunrisel135.github.io/blog_lyl/categories/index.html
 https://sunrisel135.github.io/blog_lyl
-https://sunrisel135.github.io/blog_lyl/tags/%E6%8C%81%E7%BB%AD%E8%A1%A5%E5%85%85/
-https://sunrisel135.github.io/blog_lyl/tags/%E9%9D%A2%E8%AF%95/
 https://sunrisel135.github.io/blog_lyl/tags/Hexo%E5%8D%9A%E5%AE%A2/
+https://sunrisel135.github.io/blog_lyl/tags/%E9%9D%A2%E8%AF%95/
