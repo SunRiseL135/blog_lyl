@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/2024/03/06/%E5%AD%90%E3%80%81%E7%88%B6%E7%B1%BB%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/2024/03/04/hello-world/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://sunrisel135.github.io/blog_lyl/2024/03/05/Java%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80/</loc>
     
     <lastmod>2024-03-06</lastmod>
@@ -12,15 +30,6 @@
   
   <url>
     <loc>https://sunrisel135.github.io/blog_lyl/2024/03/04/Hexo+github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/2024/03/04/hello-world/</loc>
     
     <lastmod>2024-03-06</lastmod>
     
@@ -78,6 +87,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/tags/Java%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
+    <lastmod>2024-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/Java%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2024-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
