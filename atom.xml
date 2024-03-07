@@ -6,7 +6,7 @@
   <link href="https://sunrisel135.github.io/blog_lyl/atom.xml" rel="self"/>
   
   <link href="https://sunrisel135.github.io/blog_lyl/"/>
-  <updated>2024-03-06T13:10:01.480Z</updated>
+  <updated>2024-03-07T07:18:07.180Z</updated>
   <id>https://sunrisel135.github.io/blog_lyl/</id>
   
   <author>
@@ -17,16 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>实例化对象方式</title>
+    <link href="https://sunrisel135.github.io/blog_lyl/2024/03/07/%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%AF%B9%E8%B1%A1%E6%96%B9%E5%BC%8F/"/>
+    <id>https://sunrisel135.github.io/blog_lyl/2024/03/07/%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%AF%B9%E8%B1%A1%E6%96%B9%E5%BC%8F/</id>
+    <published>2024-03-07T07:15:31.000Z</published>
+    <updated>2024-03-07T07:18:07.180Z</updated>
+    
+    <content type="html"><![CDATA[<p>实例化对象的几种方式总结。</p><span id="more"></span><ul><li>构造函数实例化<ul><li>无参构造函数</li><li>有参构造函数</li></ul></li><li>工厂模式实例化<ul><li>静态工厂</li><li>非静态工厂</li></ul></li><li>反射</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;实例化对象的几种方式总结。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Java基础" scheme="https://sunrisel135.github.io/blog_lyl/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="Java知识点" scheme="https://sunrisel135.github.io/blog_lyl/tags/Java%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
     <title>子、父类加载顺序</title>
     <link href="https://sunrisel135.github.io/blog_lyl/2024/03/06/%E5%AD%90%E3%80%81%E7%88%B6%E7%B1%BB%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/"/>
     <id>https://sunrisel135.github.io/blog_lyl/2024/03/06/%E5%AD%90%E3%80%81%E7%88%B6%E7%B1%BB%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/</id>
     <published>2024-03-06T12:58:55.000Z</published>
-    <updated>2024-03-06T13:10:01.480Z</updated>
+    <updated>2024-03-07T07:18:39.273Z</updated>
     
-    <content type="html"><![CDATA[<p>c参考链接: <a href="https://blog.csdn.net/j_love93/article/details/77693230">https://blog.csdn.net/j_love93/article/details/77693230</a></p><p>详解请查看全文。。。</p><span id="more"></span><h5 id="1-在没有子类的情况下"><a href="#1-在没有子类的情况下" class="headerlink" title="1.在没有子类的情况下"></a>1.在没有子类的情况下</h5><p>**在初始化类时候，首先加载类的静态变量和静态语句块（按照代码上下顺序执行），然后加载类的非静态变量和非静态语句块（按照代码上下顺序执行），最后加载类的构造函数。 </p><p>至于类的静态方法和非静态方法只有主动调用的时候才会执行,区别在于静态方法可以直接用类名直接调用(实例化对象也可以),而非静态方法只能先实例化对象后才能调用。 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PS:不管是父类还是子类加载（静态变量和静态语句块）都只能加载一次。</span><br><span class="line"></span><br><span class="line">总结：静态 -&gt; 非静态 -&gt; 构造函数</span><br></pre></td></tr></table></figure><h5 id="2-在有子类的情况下"><a href="#2-在有子类的情况下" class="headerlink" title="2.在有子类的情况下"></a>2.在有子类的情况下</h5><p>在初始化子类的时候，首先加载父类的静态变量和静态语句块（按照代码上下顺序执行），然后加载子类的静态变量和静态语句块（按照代码上下顺序执行），然后加载父类的非静态变量和非静态语句块（按照代码上下顺序执行），再加载父类的构造函数。然后加载子类的非静态变量和非静态语句块（按照代码上下顺序执行），最后加载子类的构造函数。 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 父类的静态变量和静态语句块（按照代码上下顺序执行）</span><br><span class="line">2. 子类的静态变量和静态语句块（按照代码上下顺序执行）</span><br><span class="line">3. 父类的非静态变量和非静态语句块（按照代码上下顺序执行）</span><br><span class="line">4. 父类的构造函数</span><br><span class="line">5. 子类的非静态变量和非静态语句块（按照代码上下顺序执行）</span><br><span class="line">6. 子类的构造函数</span><br><span class="line"></span><br><span class="line">总结：父类静态--子类静态--父类非静态--父类构造--子类非静态--子类构造</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>参考链接: <a href="https://blog.csdn.net/j_love93/article/details/77693230">https://blog.csdn.net/j_love93/article/details/77693230</a></p><p>详解请查看全文。。。</p><span id="more"></span><h5 id="1-在没有子类的情况下"><a href="#1-在没有子类的情况下" class="headerlink" title="1.在没有子类的情况下"></a>1.在没有子类的情况下</h5><p>**在初始化类时候，首先加载类的静态变量和静态语句块（按照代码上下顺序执行），然后加载类的非静态变量和非静态语句块（按照代码上下顺序执行），最后加载类的构造函数。 </p><p>至于类的静态方法和非静态方法只有主动调用的时候才会执行,区别在于静态方法可以直接用类名直接调用(实例化对象也可以),而非静态方法只能先实例化对象后才能调用。 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PS:不管是父类还是子类加载（静态变量和静态语句块）都只能加载一次。</span><br><span class="line"></span><br><span class="line">总结：静态 -&gt; 非静态 -&gt; 构造函数</span><br></pre></td></tr></table></figure><h5 id="2-在有子类的情况下"><a href="#2-在有子类的情况下" class="headerlink" title="2.在有子类的情况下"></a>2.在有子类的情况下</h5><p>在初始化子类的时候，首先加载父类的静态变量和静态语句块（按照代码上下顺序执行），然后加载子类的静态变量和静态语句块（按照代码上下顺序执行），然后加载父类的非静态变量和非静态语句块（按照代码上下顺序执行），再加载父类的构造函数。然后加载子类的非静态变量和非静态语句块（按照代码上下顺序执行），最后加载子类的构造函数。 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 父类的静态变量和静态语句块（按照代码上下顺序执行）</span><br><span class="line">2. 子类的静态变量和静态语句块（按照代码上下顺序执行）</span><br><span class="line">3. 父类的非静态变量和非静态语句块（按照代码上下顺序执行）</span><br><span class="line">4. 父类的构造函数</span><br><span class="line">5. 子类的非静态变量和非静态语句块（按照代码上下顺序执行）</span><br><span class="line">6. 子类的构造函数</span><br><span class="line"></span><br><span class="line">总结：父类静态--子类静态--父类非静态--父类构造--子类非静态--子类构造</span><br></pre></td></tr></table></figure>]]></content>
     
     
-    <summary type="html">&lt;p&gt;c参考链接: &lt;a href=&quot;https://blog.csdn.net/j_love93/article/details/77693230&quot;&gt;https://blog.csdn.net/j_love93/article/details/77693230&lt;/a&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;参考链接: &lt;a href=&quot;https://blog.csdn.net/j_love93/article/details/77693230&quot;&gt;https://blog.csdn.net/j_love93/article/details/77693230&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;详解请查看全文。。。&lt;/p&gt;</summary>
     
     
