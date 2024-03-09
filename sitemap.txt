@@ -1,3 +1,4 @@
+https://sunrisel135.github.io/blog_lyl/about/index.html
 https://sunrisel135.github.io/blog_lyl/2024/03/08/Java%E9%9D%A2%E8%AF%95-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/
 https://sunrisel135.github.io/blog_lyl/2024/03/05/Java%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80/
 https://sunrisel135.github.io/blog_lyl/2024/03/07/SpringBoot3%E4%B8%8Edruid-%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E9%97%AE%E9%A2%98/
@@ -6,7 +7,6 @@ https://sunrisel135.github.io/blog_lyl/2024/03/07/Spring%E4%BB%8E%E9%85%8D%E7%BD
 https://sunrisel135.github.io/blog_lyl/2024/03/06/%E5%AD%90%E3%80%81%E7%88%B6%E7%B1%BB%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/
 https://sunrisel135.github.io/blog_lyl/2024/03/07/%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%AF%B9%E8%B1%A1%E6%96%B9%E5%BC%8F/
 https://sunrisel135.github.io/blog_lyl/tags/index.html
-https://sunrisel135.github.io/blog_lyl/about/index.html
 https://sunrisel135.github.io/blog_lyl/categories/index.html
 https://sunrisel135.github.io/blog_lyl
 https://sunrisel135.github.io/blog_lyl/tags/%E6%95%99%E7%A8%8B/
