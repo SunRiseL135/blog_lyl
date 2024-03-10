@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Java面试-集合"><meta name="keywords" content="面试"><meta name="author" content="lyl_L-,undefined"><meta name="copyright" content="lyl_L-"><title>Java面试-集合【lyl'blog】</title><link rel="stylesheet" href="/blog_lyl/css/fan.css"><link rel="stylesheet" href="/blog_lyl/css/thirdparty/jquery.mCustomScrollbar.min.css"><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"><link rel="icon" href="/blog_lyl/L.ico"><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- script(src=url_for("/js/mathjax/mathjax.js"))--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+});
+</script><script>var isPassword = '' || false;
+if (isPassword) {
+    if (prompt('请输入文章密码') !== '') {
+        alert('密码错误！');
+        history.back();
+    }
+}</script><script>window.GLOBAL_CONFIG = {
+  root: '/blog_lyl/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  gitment: {},
+  valine: {},
+  twikoo: {},
+}</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog_lyl/atom.xml" title="lyl'blog" type="application/atom+xml">
+</head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="toggle-sidebar-info button-hover"><span data-toggle="文章目录">站点概览</span></div><div class="sidebar-toc"><div class="sidebar-toc-title">目录</div><div class="sidebar-toc-progress"><span class="progress-notice">您已阅读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc-progress-bar"></div></div><div class="sidebar-toc-content" id="sidebar-toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E9%9B%86%E5%90%88%E6%A6%82%E8%BF%B0%E3%80%91"><span class="toc-number">1.</span> <span class="toc-text">【集合概述】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-Java%E9%9B%86%E5%90%88"><span class="toc-number">1.1.</span> <span class="toc-text">– Java集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E8%AF%B4%E8%AF%B4-List-Set-Queue-Map-%E5%9B%9B%E8%80%85%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">– 说说 List, Set, Queue, Map 四者的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%80%BB%E7%BB%93"><span class="toc-number">1.3.</span> <span class="toc-text">– 集合框架底层数据结构总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E5%A6%82%E4%BD%95%E9%80%89%E7%94%A8%E9%9B%86%E5%90%88"><span class="toc-number">1.4.</span> <span class="toc-text">– 如何选用集合?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E9%9B%86%E5%90%88%EF%BC%9F"><span class="toc-number">1.5.</span> <span class="toc-text">– 为什么要使用集合？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%80%90List%E3%80%91"><span class="toc-number">1.6.</span> <span class="toc-text">【List】</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-ArrayList-%E5%92%8C-Array%EF%BC%88%E6%95%B0%E7%BB%84%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.7.</span> <span class="toc-text">– ArrayList 和 Array（数组）的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-ArrayList-%E5%92%8C-Vector-%E7%9A%84%E5%8C%BA%E5%88%AB-%EF%BC%88%E4%BA%86%E8%A7%A3%E5%8D%B3%E5%8F%AF%EF%BC%89"><span class="toc-number">1.8.</span> <span class="toc-text">– ArrayList 和 Vector 的区别?（了解即可）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-Vector-%E5%92%8C-Stack-%E7%9A%84%E5%8C%BA%E5%88%AB-%EF%BC%88%E4%BA%86%E8%A7%A3%E5%8D%B3%E5%8F%AF%EF%BC%89"><span class="toc-number">1.9.</span> <span class="toc-text">– Vector 和 Stack 的区别?（了解即可）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-ArrayList-%E5%8F%AF%E4%BB%A5%E6%B7%BB%E5%8A%A0-null-%E5%80%BC%E5%90%97%EF%BC%9F"><span class="toc-number">1.10.</span> <span class="toc-text">– ArrayList 可以添加 null 值吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-ArrayList-%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%EF%BC%9F"><span class="toc-number">1.11.</span> <span class="toc-text">– ArrayList 插入和删除元素的时间复杂度？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-LinkedList-%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%EF%BC%9F"><span class="toc-number">1.12.</span> <span class="toc-text">– LinkedList 插入和删除元素的时间复杂度？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-RandomAccess-%E6%8E%A5%E5%8F%A3%EF%BC%9FLinkedList-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E5%AE%9E%E7%8E%B0-RandomAccess-%E6%8E%A5%E5%8F%A3%EF%BC%9F"><span class="toc-number">1.13.</span> <span class="toc-text">– RandomAccess 接口？LinkedList 为什么不能实现 RandomAccess 接口？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-ArrayList-%E4%B8%8E-LinkedList-%E5%8C%BA%E5%88%AB"><span class="toc-number">1.14.</span> <span class="toc-text">– ArrayList 与 LinkedList 区别?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%E5%92%8C%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8"><span class="toc-number">1.15.</span> <span class="toc-text">– 双向链表和双向循环链表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E8%AF%B4%E4%B8%80%E8%AF%B4-ArrayList-%E7%9A%84%E6%89%A9%E5%AE%B9%E6%9C%BA%E5%88%B6%E5%90%A7"><span class="toc-number">1.16.</span> <span class="toc-text">– 说一说 ArrayList 的扩容机制吧</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90Set%E3%80%91"><span class="toc-number">2.</span> <span class="toc-text">【Set】</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/blog_lyl/images/Java.png"></div><div class="author-info-name">lyl_L-</div><div class="author-info-description"></div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/SunRiseL135" target="_blank">GitHub<i class="icon-dot bg-color5"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/blog_lyl/archives"><span class="pull-top">日志</span><span class="pull-bottom">9</span></a><a class="author-info-articles-tags article-meta" href="/blog_lyl/tags"><span class="pull-top">标签</span><span class="pull-bottom">4</span></a><a class="author-info-articles-categories article-meta" href="/blog_lyl/categories"><span class="pull-top">分类</span><span class="pull-bottom">8</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/blog_lyl">首页</a><a class="menu-item" href="/blog_lyl/tags">标签</a><a class="menu-item" href="/blog_lyl/categories">分类</a><a class="menu-item" href="/blog_lyl/archives">归档</a><a class="menu-item" href="/blog_lyl/about">关于</a></nav><div class="right-info"><a class="title-name" href="/blog_lyl/">lyl'blog</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><article id="post"><div class="post-header"><div class="title">Java面试-集合</div><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 发表于 2024-03-10 | 更新于 2024-03-10</time><!--time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]--><div class="button-hover categories"><i class="fa fa-inbox article-icon" aria-hidden="true"></i><a class="link-a" href="/blog_lyl/categories/Java%E9%9B%86%E5%90%88/">Java集合</a></div><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/blog_lyl/tags/%E9%9D%A2%E8%AF%95/">面试</a></div></div></div><div class="main-content"><p>Java集合框架总结…</p>
+<span id="more"></span>
+
+
+
+<h3 id="【集合概述】"><a href="#【集合概述】" class="headerlink" title="【集合概述】"></a>【集合概述】</h3><h4 id="–-Java集合"><a href="#–-Java集合" class="headerlink" title="– Java集合"></a>– Java集合</h4><p>Java 集合， 也叫作容器，主要是由两大接口派生而来：</p>
+<ol>
+<li><code>Collection</code>接口，主要用于存放<strong>单一元素</strong>；</li>
+<li><code>Map</code> 接口，主要用于存放<strong>键值对</strong>。</li>
+</ol>
+<h4 id="–-说说-List-Set-Queue-Map-四者的区别？"><a href="#–-说说-List-Set-Queue-Map-四者的区别？" class="headerlink" title="– 说说 List, Set, Queue, Map 四者的区别？"></a>– 说说 List, Set, Queue, Map 四者的区别？</h4><ul>
+<li><code>List</code>(<em>对付顺序的好帮手</em>): 存储的元素是<strong>有序的</strong>、<strong>可重复</strong>的。</li>
+<li><code>Set</code>(<em>注重独一无二的性质</em>): 存储的元素<strong>不可重复</strong>的。</li>
+<li><code>Queue</code>(<em>实现排队功能的叫号机</em>): 按特定的<strong>排队</strong>规则来确定先后顺序，存储的元素是<strong>有序</strong>的、<strong>可重复</strong>的。</li>
+<li><code>Map</code>(<em>用 key 来搜索的专家</em>): 使用<strong>键值对（key-value）</strong>存储，<strong>key 是无序的、不可重复的</strong>，<strong>value 是无序的、可重复的</strong>，<strong>每个键最多映射到一个值</strong>。</li>
+</ul>
+<h4 id="–-集合框架底层数据结构总结"><a href="#–-集合框架底层数据结构总结" class="headerlink" title="– 集合框架底层数据结构总结"></a>– 集合框架底层数据结构总结</h4><ul>
+<li><strong>Collection</strong><ul>
+<li><code>List</code><ul>
+<li><code>ArrayList</code>：**<code>Object[]</code> 数组**。详细可以查看：<a href="">ArrayList 源码分析</a>。</li>
+<li><code>Vector</code>：<code>Object[]</code> 数组。</li>
+<li><code>LinkedList</code>：<strong>双向链表</strong> (JDK1.6 之前为循环链表，JDK1.7 取消了循环)。详细可以查看：<a href="">LinkedList 源码分析</a>。</li>
+</ul>
+</li>
+<li><code>Set</code><ul>
+<li><code>HashSet</code>(无序，唯一): 基于 <code>HashMap</code> 实现的，底层采用 HashMap 来保存元素。</li>
+<li><code>LinkedHashSet</code>: <code>LinkedHashSet</code> 是 <code>HashSet</code> 的子类，并且其内部是通过 LinkedHashMap 来实现的。</li>
+<li><code>TreeSet</code>(有序，唯一): <strong>红黑树</strong>(自平衡的排序二叉树)</li>
+</ul>
+</li>
+<li><strong>Queue</strong><ul>
+<li><code>PriorityQueue</code>: <code>Object[]</code> 数组来实现小顶堆。详细可以查看：<a href="">PriorityQueue 源码分析</a>。</li>
+<li><code>DelayQueue</code>:<code>PriorityQueue</code>。详细可以查看：<a href="">DelayQueue 源码分析</a>。</li>
+<li><code>ArrayDeque</code>: 可扩容动态双向数组。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Map</strong><ul>
+<li><code>HashMap</code>：<strong>JDK1.8 之前</strong> <code>HashMap</code> 由<strong>数组+链表</strong>组成的，数组是 <code>HashMap</code> 的主体，链表则是主要为了解决哈希冲突而存在的（“拉链法”解决冲突）。<strong>JDK1.8 以后</strong>在解决哈希冲突时有了较大的变化，<strong>当链表长度大于阈值（默认为 8）（将链表转换成红黑树前会判断，如果当前数组的长度小于 64，那么会选择先进行数组扩容，而不是转换为红黑树）时，将链表转化为红黑树</strong>，以减少搜索时间。详细可以查看：<a href="">HashMap 源码分析</a>。</li>
+<li><code>LinkedHashMap</code>：<code>LinkedHashMap</code> 继承自 <code>HashMap</code>，所以它的底层仍然是基于<strong>拉链式散列结构即由数组和链表或红黑树组成</strong>。另外，<code>LinkedHashMap</code> 在上面结构的基础上，增加了一条<strong>双向链表</strong>，使得上面的结构可以保持键值对的插入顺序。</li>
+<li><code>Hashtable</code>：<strong>数组+链表</strong>组成的，数组是 <code>Hashtable</code> 的主体，链表则是主要为了解决哈希冲突而存在的。</li>
+<li><code>TreeMap</code>：红黑树（自平衡的排序二叉树）。</li>
+</ul>
+</li>
+</ul>
+<h4 id="–-如何选用集合"><a href="#–-如何选用集合" class="headerlink" title="– 如何选用集合?"></a>– 如何选用集合?</h4><ul>
+<li>根据<strong>键值</strong>获取到元素值时就选用 <code>Map</code> 接口下的集合<ul>
+<li>需要<strong>排序</strong>时选择 <code>TreeMap</code></li>
+<li>不需要排序时就选择 <code>HashMap</code></li>
+<li>需要保证<strong>线程安全</strong>就选用 <code>ConcurrentHashMap</code></li>
+</ul>
+</li>
+<li>只需要存放<strong>元素值</strong>时，就选择实现<code>Collection</code> 接口的集合，<ul>
+<li>需要<strong>保证元素唯一</strong>时选择实现 <code>Set</code> 接口的集合比如 <code>TreeSet</code> 或 <code>HashSet</code>，</li>
+<li>不需要就选择实现 <code>List</code> 接口的比如 <code>ArrayList</code> 或 <code>LinkedList</code>，然后再根据实现这些接口的集合的特点来选用。</li>
+</ul>
+</li>
+</ul>
+<h4 id="–-为什么要使用集合？"><a href="#–-为什么要使用集合？" class="headerlink" title="– 为什么要使用集合？"></a>– 为什么要使用集合？</h4><ul>
+<li>数组：存储一组类型相同的数据</li>
+<li>集合：存储的数据类型多种多样且数量不确定</li>
+<li>Java 集合提高了数据的存储和处理灵活性，可以更好地适应现代软件开发中多样化的数据需求，并支持高质量的代码编写</li>
+</ul>
+<h4 id="【List】"><a href="#【List】" class="headerlink" title="【List】"></a>【List】</h4><h4 id="–-ArrayList-和-Array（数组）的区别？"><a href="#–-ArrayList-和-Array（数组）的区别？" class="headerlink" title="– ArrayList 和 Array（数组）的区别？"></a>– ArrayList 和 Array（数组）的区别？</h4><p><code>ArrayList</code> 动态数组，比 Array（静态数组） 使用起来更加灵活：</p>
+<ul>
+<li><code>ArrayList</code>会<strong>动态地扩容或缩容</strong>，而 <code>Array</code> 创建后就无法改变长度。</li>
+<li><code>ArrayList</code> 可使用<strong>泛型</strong>来确保类型安全，<code>Array</code> 则不行。</li>
+<li><code>ArrayList</code> 中<strong>只能存储对象</strong>。对于基本类型数据，需要使用其对应的<strong>包装类</strong>（如 Integer、Double 等）。<code>Array</code> 则是都可以存储。</li>
+<li><code>ArrayList</code> 支持插入、删除、遍历等常见操作，并且提供了丰富的 API 操作方法，比如 <code>add()</code>、<code>remove()</code>等。<code>Array</code> 只是一个固定长度的数组，<strong>只能按照下标访问其中的元素，不具备动态添加、删除元素的能力</strong>。</li>
+<li><code>ArrayList</code><strong>创建时不需要指定大小</strong>，而<code>Array</code>创建时<strong>必须指定大小</strong>。</li>
+</ul>
+<h4 id="–-ArrayList-和-Vector-的区别-（了解即可）"><a href="#–-ArrayList-和-Vector-的区别-（了解即可）" class="headerlink" title="– ArrayList 和 Vector 的区别?（了解即可）"></a>– ArrayList 和 Vector 的区别?（了解即可）</h4><ul>
+<li><code>ArrayList</code> 是 List 的主要实现类，底层使用 Object[]存储，适用于频繁的查找工作，线程不安全 </li>
+<li><code>Vector</code> 是 List 的古老实现类，底层使用Object[] 存储，<strong>线程安全</strong></li>
+</ul>
+<h4 id="–-Vector-和-Stack-的区别-（了解即可）"><a href="#–-Vector-和-Stack-的区别-（了解即可）" class="headerlink" title="– Vector 和 Stack 的区别?（了解即可）"></a>– Vector 和 Stack 的区别?（了解即可）</h4><ul>
+<li><code>Vector</code> 和 Stack 两者都是线程安全的，都是使用 synchronized 关键字进行同步处理。</li>
+<li><code>Stack</code> 继承自 Vector，是一个后进先出的栈，而 Vector 是一个列表。</li>
+</ul>
+<p>随着 Java 并发编程的发展，Vector 和 Stack 已经被淘汰，推荐使用并发集合类（例如 <code>ConcurrentHashMap</code>、<code>CopyOnWriteArrayList</code> 等）或者手动实现线程安全的方法来提供安全的多线程操作支持。</p>
+<h4 id="–-ArrayList-可以添加-null-值吗？"><a href="#–-ArrayList-可以添加-null-值吗？" class="headerlink" title="– ArrayList 可以添加 null 值吗？"></a>– ArrayList 可以添加 null 值吗？</h4><p><code>ArrayList</code> 中可以<strong>存储任何类型的对象</strong>，包括 null 值。</p>
+<p>不建议向ArrayList 中添加 null 值， null 值无意义，会让代码难以维护比如忘记做判空处理就会导致空指针异常。</p>
+<h4 id="–-ArrayList-插入和删除元素的时间复杂度？"><a href="#–-ArrayList-插入和删除元素的时间复杂度？" class="headerlink" title="– ArrayList 插入和删除元素的时间复杂度？"></a>– ArrayList 插入和删除元素的时间复杂度？</h4><p><strong>对于插入：</strong></p>
+<ul>
+<li><p><strong>头插：</strong>需将所有元素依次向后移一个位置，所以<strong>O(n)</strong></p>
+</li>
+<li><p><strong>尾插</strong>：<code>ArrayList</code> 的容量未达到极限时，**O(1)**，只需在数组末尾添加元素；</p>
+<p>容量已达到极限需要扩容时，需要执行一次 <strong>O(n)</strong> 的操作将原数组复制到新的更大的数组中，然后<strong>再</strong>执行 <strong>O(1)</strong> 的操作添加元素。</p>
+</li>
+<li><p><strong>指定位置插入：</strong>目标位置之后的所有元素都向后移动一个位置，然后再把新元素放入指定位置。这个过程需要移动平均 n&#x2F;2 个元素，因此时间复杂度为 **O(n)**。</p>
+</li>
+</ul>
+<p><strong>对于删除：</strong></p>
+<ul>
+<li>头部删除：需将所有元素依次向前移动一个位置，**O(n)**。</li>
+<li>尾部删除：**O(1)**。</li>
+<li>指定位置删除：需要将目标元素之后的所有元素向前移动一个位置以填补被删除的空白位置，因此需要移动平均 n&#x2F;2 个元素，时间复杂度为 **O(n)**。</li>
+</ul>
+<h4 id="–-LinkedList-插入和删除元素的时间复杂度？"><a href="#–-LinkedList-插入和删除元素的时间复杂度？" class="headerlink" title="– LinkedList 插入和删除元素的时间复杂度？"></a>– LinkedList 插入和删除元素的时间复杂度？</h4><ul>
+<li>头部插入&#x2F;删除：只需修改头结点的指针即可，时间复杂度为 **O(1)**。</li>
+<li>尾部插入&#x2F;删除：只需修改尾结点的指针即可，时间复杂度为 **O(1)**。</li>
+<li>指定位置插入&#x2F;删除：需<strong>先移动</strong>到指定位置，<strong>再修改</strong>指定节点的指针完成插入&#x2F;删除，因此需移动平均 n&#x2F;2 个元素，时间复杂度为 **O(n)**。</li>
+</ul>
+<h4 id="–-RandomAccess-接口？LinkedList-为什么不能实现-RandomAccess-接口？"><a href="#–-RandomAccess-接口？LinkedList-为什么不能实现-RandomAccess-接口？" class="headerlink" title="– RandomAccess 接口？LinkedList 为什么不能实现 RandomAccess 接口？"></a>– RandomAccess 接口？LinkedList 为什么不能实现 RandomAccess 接口？</h4><p>★<code>RandomAccess</code> 是一个<strong>标记接口</strong>，用来<strong>表明实现该接口的类支持随机访问（即可以通过索引快速访问元素）</strong>。快速随机访问就是通过元素的序号快速获取元素对象(对应于<code>get(int index)</code>方法)。</p>
+<p>在 <code>binarySearch（)</code> 方法中，它要判断传入的 list 是否 <code>RandomAccess</code> 的实例，如果是，调用<code>indexedBinarySearch()</code>方法，如果不是，那么调用<code>iteratorBinarySearch()</code>方法</p>
+<p><code>LinkedList</code> 底层数据结构是链表，内存地址不连续，<strong>只能通过指针来定位</strong>，<strong>不支持随机快速访问</strong>，所以不能实现 <code>RandomAccess</code> 接口。</p>
+<h4 id="–-ArrayList-与-LinkedList-区别"><a href="#–-ArrayList-与-LinkedList-区别" class="headerlink" title="– ArrayList 与 LinkedList 区别?"></a>– ArrayList 与 LinkedList 区别?</h4><ul>
+<li><p><strong>是否保证线程安全</strong>：<code>ArrayList</code> 和 <code>LinkedList</code> 都是不同步的，也<strong>就</strong>是<strong>不保证线程安全</strong>；</p>
+</li>
+<li><p><strong>底层数据结构</strong>：<code>ArrayList</code> 底层使用的是 <code>Object</code> <strong>数组</strong>；<code>LinkedList</code> 底层使用的是 <strong>双向链表</strong> 数据结构（JDK1.6 之前为循环链表，JDK1.7 取消了循环。）</p>
+</li>
+<li><p><strong>插入和删除是否受元素位置的影响：</strong></p>
+<p><code>ArrayList</code> 采用<strong>数组存储</strong>，插入和删除元素的时间复杂度受元素位置的影响；</p>
+<p><code>add(E e)</code>方法， <code>ArrayList</code> 会默认追加到列表的末尾。</p>
+<p><code>LinkedList</code> 采用<strong>链表存储</strong>，在<strong>头尾插入或者删除元素</strong>不受元素位置的影响<code>LinkedList</code> 采用链表存储，所以在头尾插入或者删除元素不受元素位置的影响。<strong>指定位置</strong>需要先移动到指定位置再插入和删除。</p>
+</li>
+<li><p><strong>是否支持快速随机访问：</strong> <code>LinkedList</code> 不支持高效的随机元素访问，而 <code>ArrayList</code>（实现了 <code>RandomAccess</code> 接口） 支持。</p>
+</li>
+<li><p><strong>内存空间占用：</strong> <code>ArrayList</code> 的空间浪费主要体现在在 list 列表的结尾会<strong>预留</strong>一定的容量空间，而 LinkedList 的空间花费则体现在它的每一个元素都需要消耗比 ArrayList 更多的空间（因为要存放直接后继和直接前驱以及数据）。</p>
+</li>
+</ul>
+<h4 id="–-双向链表和双向循环链表"><a href="#–-双向链表和双向循环链表" class="headerlink" title="– 双向链表和双向循环链表"></a>– 双向链表和双向循环链表</h4><ul>
+<li><strong>双向链表：</strong> 包含两个指针，一个 prev 指向前一个节点，一个 next 指向后一个节点。</li>
+<li><strong>双向循环链表：</strong> 最后一个节点的 next 指向 head，而 head 的 prev 指向最后一个节点，构成一个环。</li>
+</ul>
+<h4 id="–-说一说-ArrayList-的扩容机制吧"><a href="#–-说一说-ArrayList-的扩容机制吧" class="headerlink" title="– 说一说 ArrayList 的扩容机制吧"></a>– 说一说 ArrayList 的扩容机制吧</h4><h3 id="【Set】"><a href="#【Set】" class="headerlink" title="【Set】"></a>【Set】</h3></div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-meta">本文作者: </span><span class="post-copyright-info"><a href="mailto:undefined">lyl_L-</a></span></div><div class="post-copyright-type"><span class="post-copyright-meta">本文链接: </span><span class="post-copyright-info"><a href="https://sunrisel135.github.io/blog_lyl/2024/03/10/Java%E9%9D%A2%E8%AF%95-%E9%9B%86%E5%90%88/">https://sunrisel135.github.io/blog_lyl/2024/03/10/Java面试-集合/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-meta">本文声明: </span><span class="post-copyright-info">内容均为个人总结，仅供个人参考！</span></div></div></article><div id="pagination"><div class="prev-post pull-left"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/blog_lyl/2024/03/10/Java%E9%9D%A2%E8%AF%95-IO/"><i class="fas fa-angle-left">&nbsp;</i><span>Java面试-IO</span></a></div><div class="next-post pull-right"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/blog_lyl/2024/03/08/Java%E9%9D%A2%E8%AF%95-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"><span>Java面试-并发编程</span><span>&nbsp;</span><i class="fas fa-angle-right"></i></a></div></div><!--div!= paginator()--></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fas fa-file-o"></i></span><span id="busuanzi_value_page_pv"></span><span></span></div><div class="copyright">&copy;2024 By lyl_L-</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/copy.js"></script><!--script(src=url)--></body></html>
