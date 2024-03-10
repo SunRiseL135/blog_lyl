@@ -156,6 +156,13 @@
   </url>
   
   <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/Java-IO/</loc>
+    <lastmod>2024-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://sunrisel135.github.io/blog_lyl/categories/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -170,7 +177,7 @@
   </url>
   
   <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/categories/SpringBoot/</loc>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/Java%E9%9B%86%E5%90%88/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -184,21 +191,7 @@
   </url>
   
   <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/categories/IO/</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/categories/Java-IO/</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/categories/Java%E9%9B%86%E5%90%88/</loc>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/SpringBoot/</loc>
     <lastmod>2024-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
