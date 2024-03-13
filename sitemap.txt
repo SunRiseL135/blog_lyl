@@ -1,6 +1,7 @@
+https://sunrisel135.github.io/blog_lyl/2024/03/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9D%A2%E8%AF%95-MySQL/
+https://sunrisel135.github.io/blog_lyl/2024/03/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9D%A2%E8%AF%95-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/
 https://sunrisel135.github.io/blog_lyl/2024/03/13/%E5%AD%97%E7%AC%A6%E9%9B%86/
 https://sunrisel135.github.io/blog_lyl/2024/03/06/%E5%AD%90%E3%80%81%E7%88%B6%E7%B1%BB%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/
-https://sunrisel135.github.io/blog_lyl/2024/03/13/Java%E9%9D%A2%E8%AF%95-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/
 https://sunrisel135.github.io/blog_lyl/2024/03/12/Java%E9%9D%A2%E8%AF%95-JVM/
 https://sunrisel135.github.io/blog_lyl/2024/03/10/Java%E9%9D%A2%E8%AF%95-%E9%9B%86%E5%90%88/
 https://sunrisel135.github.io/blog_lyl/2024/03/10/Java%E9%9D%A2%E8%AF%95-IO/
