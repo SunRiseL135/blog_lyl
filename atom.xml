@@ -6,7 +6,7 @@
   <link href="https://sunrisel135.github.io/blog_lyl/atom.xml" rel="self"/>
   
   <link href="https://sunrisel135.github.io/blog_lyl/"/>
-  <updated>2024-03-13T01:52:18.489Z</updated>
+  <updated>2024-03-13T02:07:00.008Z</updated>
   <id>https://sunrisel135.github.io/blog_lyl/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>字符集</title>
+    <link href="https://sunrisel135.github.io/blog_lyl/2024/03/13/%E5%AD%97%E7%AC%A6%E9%9B%86/"/>
+    <id>https://sunrisel135.github.io/blog_lyl/2024/03/13/%E5%AD%97%E7%AC%A6%E9%9B%86/</id>
+    <published>2024-03-13T01:56:47.000Z</published>
+    <updated>2024-03-13T02:07:00.008Z</updated>
+    
+    <content type="html"><![CDATA[<p>详解请查看全文…</p><span id="more"></span><h4 id="字符集是什么？"><a href="#字符集是什么？" class="headerlink" title="字符集是什么？"></a>字符集是什么？</h4><p><strong>字符</strong>是各种文字和符号的统称，包括各个国家文字、标点符号、表情、数字等等。</p><p> <strong>字符集</strong> 就是一系列字符的集合。</p><h4 id="计算机只能存储二进制的数据，那英文、汉字、表情等字符应该如何存储呢？"><a href="#计算机只能存储二进制的数据，那英文、汉字、表情等字符应该如何存储呢？" class="headerlink" title="计算机只能存储二进制的数据，那英文、汉字、表情等字符应该如何存储呢？"></a>计算机只能存储二进制的数据，那英文、汉字、表情等字符应该如何存储呢？</h4><p>将这些字符和二进制的数据一一对应起来。</p><h5 id="字符编码、字符解码"><a href="#字符编码、字符解码" class="headerlink" title="字符编码、字符解码"></a>字符编码、字符解码</h5><p>将字符对应二进制数据的过程称为”<strong>字符编码</strong>“，反之，二进制数据解析成字符的过程称为“<strong>字符解码</strong>”。</p><h4 id="字符编码是什么？"><a href="#字符编码是什么？" class="headerlink" title="字符编码是什么？"></a>字符编码是什么？</h4><p>字符编码是一种将字符集中的<strong>字符与计算机中的二进制数据相互转换的方法</strong>，可以看作是一种映射规则。也就是说，字符编码的目的是为了让计算机能够存储和传输各种文字信息。</p><p>每种字符集都有自己的字符编码规则，常用的字符集编码规则有 ASCII 编码、 GB2312 编码、GBK 编码、GB18030 编码、Big5 编码、UTF-8 编码、UTF-16 编码等。</p><h4 id="有哪些常见的字符集？"><a href="#有哪些常见的字符集？" class="headerlink" title="有哪些常见的字符集？"></a>有哪些常见的字符集？</h4><p>不同的字符集的主要区别在于：</p><ul><li>可以表示的字符范围</li><li>编码方式</li></ul><h5 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h5><p>是一套主要用于现代美国英语的字符集（这也是 ASCII 字符集的局限性所在）。</p><h5 id="GB2312"><a href="#GB2312" class="headerlink" title="GB2312"></a>GB2312</h5><p>很多国家都捣鼓了一个适合自己国家语言的字符集。</p><h5 id="GBK"><a href="#GBK" class="headerlink" title="GBK"></a>GBK</h5><p>GBK 字符集可以看作是 GB2312 字符集的扩展，兼容 GB2312 字符集，共收录了 20000 多个汉字。</p><p>GBK 中 K 是汉语拼音 Kuo Zhan（扩展）中的“Kuo”的首字母。</p><h5 id="GB18030"><a href="#GB18030" class="headerlink" title="GB18030"></a>GB18030</h5><p>完全兼容 GB2312 和 GBK 字符集，纳入中国国内少数民族的文字，且收录了日韩汉字，是目前为止最全面的汉字字符集，共收录汉字 70000 多个。</p><h5 id="BIG5"><a href="#BIG5" class="headerlink" title="BIG5"></a>BIG5</h5><p>主要针对的是繁体中文，收录了 13000 多个汉字。</p><h5 id="Unicode-UTF-8"><a href="#Unicode-UTF-8" class="headerlink" title="Unicode &amp; UTF-8"></a>Unicode &amp; UTF-8</h5><p>了不同的字符集可以表示的字符范围以及编码规则存在差异。这就导致了一个非常严重的问题：<strong>使用错误的编码方式查看一个包含字符的文件就会产生乱码现象。</strong></p><p>乱码的本质：<strong>编码和解码时用了不同或者不兼容的字符集</strong> 。</p><p><strong>Unicode 字符集</strong>中包含了世界上几乎所有已知的字符。不过，Unicode 字符集并没有规定如何存储这些字符（也就是如何使用二进制数据表示这些字符）。</p><p>然后，就有了 <strong>UTF-8</strong>（<strong>8</strong>-bit <strong>U</strong>nicode <strong>T</strong>ransformation <strong>F</strong>ormat）。类似的还有 UTF-16、 UTF-32。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;详解请查看全文…&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="字符集详解" scheme="https://sunrisel135.github.io/blog_lyl/categories/%E5%AD%97%E7%AC%A6%E9%9B%86%E8%AF%A6%E8%A7%A3/"/>
+    
+    
+    <category term="知识点" scheme="https://sunrisel135.github.io/blog_lyl/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>Java面试-数据库基础</title>
@@ -189,13 +210,13 @@
     <link href="https://sunrisel135.github.io/blog_lyl/2024/03/06/%E5%AD%90%E3%80%81%E7%88%B6%E7%B1%BB%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/"/>
     <id>https://sunrisel135.github.io/blog_lyl/2024/03/06/%E5%AD%90%E3%80%81%E7%88%B6%E7%B1%BB%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/</id>
     <published>2024-03-06T12:58:55.000Z</published>
-    <updated>2024-03-07T07:38:57.767Z</updated>
+    <updated>2024-03-13T01:57:43.784Z</updated>
     
-    <content type="html"><![CDATA[<p>参考链接: <a href="https://blog.csdn.net/j_love93/article/details/77693230">https://blog.csdn.net/j_love93/article/details/77693230</a></p><p>详解请查看全文。。。</p><span id="more"></span><h5 id="1-在没有子类的情况下"><a href="#1-在没有子类的情况下" class="headerlink" title="1.在没有子类的情况下"></a>1.在没有子类的情况下</h5><p>**在初始化类时候，首先加载类的静态变量和静态语句块（按照代码上下顺序执行），然后加载类的非静态变量和非静态语句块（按照代码上下顺序执行），最后加载类的构造函数。 </p><p>至于类的静态方法和非静态方法只有主动调用的时候才会执行,区别在于静态方法可以直接用类名直接调用(实例化对象也可以),而非静态方法只能先实例化对象后才能调用。 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PS:不管是父类还是子类加载（静态变量和静态语句块）都只能加载一次。</span><br><span class="line"></span><br><span class="line">总结：静态 -&gt; 非静态 -&gt; 构造函数</span><br></pre></td></tr></table></figure><h5 id="2-在有子类的情况下"><a href="#2-在有子类的情况下" class="headerlink" title="2.在有子类的情况下"></a>2.在有子类的情况下</h5><p>在初始化子类的时候，首先加载父类的静态变量和静态语句块（按照代码上下顺序执行），然后加载子类的静态变量和静态语句块（按照代码上下顺序执行），然后加载父类的非静态变量和非静态语句块（按照代码上下顺序执行），再加载父类的构造函数。然后加载子类的非静态变量和非静态语句块（按照代码上下顺序执行），最后加载子类的构造函数。 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 父类的静态变量和静态语句块（按照代码上下顺序执行）</span><br><span class="line">2. 子类的静态变量和静态语句块（按照代码上下顺序执行）</span><br><span class="line">3. 父类的非静态变量和非静态语句块（按照代码上下顺序执行）</span><br><span class="line">4. 父类的构造函数</span><br><span class="line">5. 子类的非静态变量和非静态语句块（按照代码上下顺序执行）</span><br><span class="line">6. 子类的构造函数</span><br><span class="line"></span><br><span class="line">总结：父类静态--子类静态--父类非静态--父类构造--子类非静态--子类构造</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>参考链接: <a href="https://blog.csdn.net/j_love93/article/details/77693230">https://blog.csdn.net/j_love93/article/details/77693230</a></p><p>详解请查看全文…</p><span id="more"></span><h5 id="1-在没有子类的情况下"><a href="#1-在没有子类的情况下" class="headerlink" title="1.在没有子类的情况下"></a>1.在没有子类的情况下</h5><p>**在初始化类时候，首先加载类的静态变量和静态语句块（按照代码上下顺序执行），然后加载类的非静态变量和非静态语句块（按照代码上下顺序执行），最后加载类的构造函数。 </p><p>至于类的静态方法和非静态方法只有主动调用的时候才会执行,区别在于静态方法可以直接用类名直接调用(实例化对象也可以),而非静态方法只能先实例化对象后才能调用。 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PS:不管是父类还是子类加载（静态变量和静态语句块）都只能加载一次。</span><br><span class="line"></span><br><span class="line">总结：静态 -&gt; 非静态 -&gt; 构造函数</span><br></pre></td></tr></table></figure><h5 id="2-在有子类的情况下"><a href="#2-在有子类的情况下" class="headerlink" title="2.在有子类的情况下"></a>2.在有子类的情况下</h5><p>在初始化子类的时候，首先加载父类的静态变量和静态语句块（按照代码上下顺序执行），然后加载子类的静态变量和静态语句块（按照代码上下顺序执行），然后加载父类的非静态变量和非静态语句块（按照代码上下顺序执行），再加载父类的构造函数。然后加载子类的非静态变量和非静态语句块（按照代码上下顺序执行），最后加载子类的构造函数。 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 父类的静态变量和静态语句块（按照代码上下顺序执行）</span><br><span class="line">2. 子类的静态变量和静态语句块（按照代码上下顺序执行）</span><br><span class="line">3. 父类的非静态变量和非静态语句块（按照代码上下顺序执行）</span><br><span class="line">4. 父类的构造函数</span><br><span class="line">5. 子类的非静态变量和非静态语句块（按照代码上下顺序执行）</span><br><span class="line">6. 子类的构造函数</span><br><span class="line"></span><br><span class="line">总结：父类静态--子类静态--父类非静态--父类构造--子类非静态--子类构造</span><br></pre></td></tr></table></figure>]]></content>
     
     
     <summary type="html">&lt;p&gt;参考链接: &lt;a href=&quot;https://blog.csdn.net/j_love93/article/details/77693230&quot;&gt;https://blog.csdn.net/j_love93/article/details/77693230&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;详解请查看全文。。。&lt;/p&gt;</summary>
+&lt;p&gt;详解请查看全文…&lt;/p&gt;</summary>
     
     
     
