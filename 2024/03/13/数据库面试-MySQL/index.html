@@ -20,7 +20,7 @@ if (isPassword) {
   valine: {},
   twikoo: {},
 }</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog_lyl/atom.xml" title="lyl'blog" type="application/atom+xml">
-</head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="toggle-sidebar-info button-hover"><span data-toggle="文章目录">站点概览</span></div><div class="sidebar-toc"><div class="sidebar-toc-title">目录</div><div class="sidebar-toc-progress"><span class="progress-notice">您已阅读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc-progress-bar"></div></div><div class="sidebar-toc-content" id="sidebar-toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E5%9F%BA%E7%A1%80%E3%80%91"><span class="toc-number">1.</span> <span class="toc-text">【MySQL 基础】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">– 什么是关系型数据库？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%BB%80%E4%B9%88%E6%98%AF-SQL%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">– 什么是 SQL？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%BB%80%E4%B9%88%E6%98%AF-MySQL%EF%BC%9F"><span class="toc-number">1.3.</span> <span class="toc-text">– 什么是 MySQL？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MySQL-%E6%9C%89%E4%BB%80%E4%B9%88%E4%BC%98%E7%82%B9%EF%BC%9F"><span class="toc-number">1.4.</span> <span class="toc-text">– MySQL 有什么优点？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MySQL-%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.5.</span> <span class="toc-text">– MySQL 字段类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B%E7%9A%84-UNSIGNED-%E5%B1%9E%E6%80%A7%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9Funsigned"><span class="toc-number">1.6.</span> <span class="toc-text">– 整数类型的 UNSIGNED 属性有什么用？unsigned</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-CHAR-%E5%92%8C-VARCHAR-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E2%98%85"><span class="toc-number">1.7.</span> <span class="toc-text">– CHAR 和 VARCHAR 的区别是什么？★</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-VARCHAR-100-%E5%92%8C-VARCHAR-10-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.8.</span> <span class="toc-text">– VARCHAR(100)和 VARCHAR(10)的区别是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-DECIMAL-%E5%92%8C-FLOAT-DOUBLE-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.9.</span> <span class="toc-text">– DECIMAL 和 FLOAT&#x2F;DOUBLE 的区别是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8-TEXT-%E5%92%8C-BLOB%EF%BC%9F"><span class="toc-number">1.10.</span> <span class="toc-text">– 为什么不推荐使用 TEXT 和 BLOB？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-DATETIME-%E5%92%8C-TIMESTAMP-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.11.</span> <span class="toc-text">– DATETIME 和 TIMESTAMP 的区别是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-NULL-%E5%92%8C-%E2%80%98%E2%80%99-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.12.</span> <span class="toc-text">– NULL 和 ‘’ 的区别是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-Boolean-%E7%B1%BB%E5%9E%8B%E5%A6%82%E4%BD%95%E8%A1%A8%E7%A4%BA%EF%BC%9Ftinyint-1"><span class="toc-number">1.13.</span> <span class="toc-text">– Boolean 类型如何表示？tinyint(1)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84%E3%80%91"><span class="toc-number">2.</span> <span class="toc-text">【MySQL 基础架构】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E3%80%91"><span class="toc-number">3.</span> <span class="toc-text">【MySQL 存储引擎】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MySQL-%E6%94%AF%E6%8C%81%E5%93%AA%E4%BA%9B%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%EF%BC%9F%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8%E5%93%AA%E4%B8%AA%EF%BC%9F"><span class="toc-number">3.1.</span> <span class="toc-text">– MySQL 支持哪些存储引擎？默认使用哪个？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MySQL-%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F"><span class="toc-number">3.2.</span> <span class="toc-text">– MySQL 存储引擎架构了解吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MyISAM-%E5%92%8C-InnoDB-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F%E2%98%86"><span class="toc-number">3.3.</span> <span class="toc-text">– MyISAM 和 InnoDB 有什么区别？☆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MyISAM-%E5%92%8C-InnoDB-%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%EF%BC%9F"><span class="toc-number">3.4.</span> <span class="toc-text">– MyISAM 和 InnoDB 如何选择？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E7%B4%A2%E5%BC%95%E3%80%91"><span class="toc-number">4.</span> <span class="toc-text">【MySQL 索引】</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/blog_lyl/images/Java.png"></div><div class="author-info-name">lyl_L-</div><div class="author-info-description"></div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/SunRiseL135" target="_blank">GitHub<i class="icon-dot bg-color4"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/blog_lyl/archives"><span class="pull-top">日志</span><span class="pull-bottom">13</span></a><a class="author-info-articles-tags article-meta" href="/blog_lyl/tags"><span class="pull-top">标签</span><span class="pull-bottom">4</span></a><a class="author-info-articles-categories article-meta" href="/blog_lyl/categories"><span class="pull-top">分类</span><span class="pull-bottom">10</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/blog_lyl">首页</a><a class="menu-item" href="/blog_lyl/tags">标签</a><a class="menu-item" href="/blog_lyl/categories">分类</a><a class="menu-item" href="/blog_lyl/archives">归档</a><a class="menu-item" href="/blog_lyl/about">关于</a></nav><div class="right-info"><a class="title-name" href="/blog_lyl/">lyl'blog</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><article id="post"><div class="post-header"><div class="title">数据库面试-MySQL</div><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 发表于 2024-03-13 | 更新于 2024-03-13</time><!--time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]--><div class="button-hover categories"><i class="fa fa-inbox article-icon" aria-hidden="true"></i><a class="link-a" href="/blog_lyl/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></div><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/blog_lyl/tags/%E9%9D%A2%E8%AF%95/">面试</a></div></div></div><div class="main-content"><p>持续补充…</p>
+</head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="toggle-sidebar-info button-hover"><span data-toggle="文章目录">站点概览</span></div><div class="sidebar-toc"><div class="sidebar-toc-title">目录</div><div class="sidebar-toc-progress"><span class="progress-notice">您已阅读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc-progress-bar"></div></div><div class="sidebar-toc-content" id="sidebar-toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E5%9F%BA%E7%A1%80%E3%80%91"><span class="toc-number">1.</span> <span class="toc-text">【MySQL 基础】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">– 什么是关系型数据库？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%BB%80%E4%B9%88%E6%98%AF-SQL%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">– 什么是 SQL？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%BB%80%E4%B9%88%E6%98%AF-MySQL%EF%BC%9F"><span class="toc-number">1.3.</span> <span class="toc-text">– 什么是 MySQL？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MySQL-%E6%9C%89%E4%BB%80%E4%B9%88%E4%BC%98%E7%82%B9%EF%BC%9F"><span class="toc-number">1.4.</span> <span class="toc-text">– MySQL 有什么优点？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MySQL-%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.5.</span> <span class="toc-text">– MySQL 字段类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B%E7%9A%84-UNSIGNED-%E5%B1%9E%E6%80%A7%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9Funsigned"><span class="toc-number">1.6.</span> <span class="toc-text">– 整数类型的 UNSIGNED 属性有什么用？unsigned</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-CHAR-%E5%92%8C-VARCHAR-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E2%98%85"><span class="toc-number">1.7.</span> <span class="toc-text">– CHAR 和 VARCHAR 的区别是什么？★</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-VARCHAR-100-%E5%92%8C-VARCHAR-10-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.8.</span> <span class="toc-text">– VARCHAR(100)和 VARCHAR(10)的区别是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-DECIMAL-%E5%92%8C-FLOAT-DOUBLE-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.9.</span> <span class="toc-text">– DECIMAL 和 FLOAT&#x2F;DOUBLE 的区别是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8-TEXT-%E5%92%8C-BLOB%EF%BC%9F"><span class="toc-number">1.10.</span> <span class="toc-text">– 为什么不推荐使用 TEXT 和 BLOB？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-DATETIME-%E5%92%8C-TIMESTAMP-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.11.</span> <span class="toc-text">– DATETIME 和 TIMESTAMP 的区别是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-NULL-%E5%92%8C-%E2%80%98%E2%80%99-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.12.</span> <span class="toc-text">– NULL 和 ‘’ 的区别是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-Boolean-%E7%B1%BB%E5%9E%8B%E5%A6%82%E4%BD%95%E8%A1%A8%E7%A4%BA%EF%BC%9Ftinyint-1"><span class="toc-number">1.13.</span> <span class="toc-text">– Boolean 类型如何表示？tinyint(1)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84%E3%80%91"><span class="toc-number">2.</span> <span class="toc-text">【MySQL 基础架构】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E3%80%91"><span class="toc-number">3.</span> <span class="toc-text">【MySQL 存储引擎】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MySQL-%E6%94%AF%E6%8C%81%E5%93%AA%E4%BA%9B%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%EF%BC%9F%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8%E5%93%AA%E4%B8%AA%EF%BC%9F"><span class="toc-number">3.1.</span> <span class="toc-text">– MySQL 支持哪些存储引擎？默认使用哪个？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MySQL-%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F"><span class="toc-number">3.2.</span> <span class="toc-text">– MySQL 存储引擎架构了解吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MyISAM-%E5%92%8C-InnoDB-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F%E2%98%86"><span class="toc-number">3.3.</span> <span class="toc-text">– MyISAM 和 InnoDB 有什么区别？☆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MyISAM-%E5%92%8C-InnoDB-%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%EF%BC%9F"><span class="toc-number">3.4.</span> <span class="toc-text">– MyISAM 和 InnoDB 如何选择？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E7%B4%A2%E5%BC%95%E3%80%91"><span class="toc-number">4.</span> <span class="toc-text">【MySQL 索引】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E7%B4%A2%E5%BC%95%E4%BB%8B%E7%BB%8D"><span class="toc-number">4.1.</span> <span class="toc-text">– 索引介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E7%B4%A2%E5%BC%95%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">4.2.</span> <span class="toc-text">– 索引的优缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E7%B4%A2%E5%BC%95%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%80%89%E5%9E%8B"><span class="toc-number">4.3.</span> <span class="toc-text">– 索引底层数据结构选型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Hash-%E8%A1%A8"><span class="toc-number">4.3.1.</span> <span class="toc-text">Hash 表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91-BST"><span class="toc-number">4.3.2.</span> <span class="toc-text">二叉查找树(BST)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AVL-%E6%A0%91"><span class="toc-number">4.3.3.</span> <span class="toc-text">AVL 树</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%A2%E9%BB%91%E6%A0%91"><span class="toc-number">4.3.4.</span> <span class="toc-text">红黑树</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#B-%E6%A0%91-B-%E6%A0%91"><span class="toc-number">4.3.5.</span> <span class="toc-text">B 树&amp; B+树</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E7%B4%A2%E5%BC%95%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93"><span class="toc-number">4.4.</span> <span class="toc-text">– 索引类型总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E9%9D%9E%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95%E4%B8%80%E5%AE%9A%E5%9B%9E%E8%A1%A8%E6%9F%A5%E8%AF%A2%E5%90%97-%E8%A6%86%E7%9B%96%E7%B4%A2%E5%BC%95"><span class="toc-number">4.5.</span> <span class="toc-text">– 非聚簇索引一定回表查询吗(覆盖索引)?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E6%9C%80%E5%B7%A6%E5%89%8D%E7%BC%80%E5%8C%B9%E9%85%8D%E5%8E%9F%E5%88%99-%E2%98%86"><span class="toc-number">4.6.</span> <span class="toc-text">– 最左前缀匹配原则 ☆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E7%B4%A2%E5%BC%95%E4%B8%8B%E6%8E%A8"><span class="toc-number">4.7.</span> <span class="toc-text">– 索引下推</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E7%B4%A2%E5%BC%95"><span class="toc-number">4.8.</span> <span class="toc-text">– 正确使用索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%BB%80%E4%B9%88%E6%98%AF%E6%85%A2%E6%9F%A5%E8%AF%A2%EF%BC%9F%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96%EF%BC%9F"><span class="toc-number">4.9.</span> <span class="toc-text">– 什么是慢查询？如何优化？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E6%9F%A5%E8%AF%A2%E7%BC%93%E5%AD%98%EF%BC%88%E4%B8%8D%E5%AE%9E%E7%94%A8%EF%BC%89%E3%80%91"><span class="toc-number">5.</span> <span class="toc-text">【MySQL 查询缓存（不实用）】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E6%97%A5%E5%BF%97%E3%80%91"><span class="toc-number">6.</span> <span class="toc-text">【MySQL 日志】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E4%BA%8B%E5%8A%A1%E3%80%91"><span class="toc-number">7.</span> <span class="toc-text">【MySQL 事务】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%BD%95%E8%B0%93%E4%BA%8B%E5%8A%A1%EF%BC%9F"><span class="toc-number">7.1.</span> <span class="toc-text">– 何谓事务？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%BD%95%E8%B0%93%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%EF%BC%9F"><span class="toc-number">7.2.</span> <span class="toc-text">– 何谓数据库事务？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%82%A3%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%E5%91%A2%EF%BC%9F"><span class="toc-number">7.2.1.</span> <span class="toc-text">那数据库事务有什么作用呢？</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E5%B9%B6%E5%8F%91%E4%BA%8B%E5%8A%A1%E5%B8%A6%E6%9D%A5%E4%BA%86%E5%93%AA%E4%BA%9B%E9%97%AE%E9%A2%98-%E2%98%86"><span class="toc-number">7.3.</span> <span class="toc-text">– 并发事务带来了哪些问题?☆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%A4%8D%E8%AF%BB%E5%92%8C%E5%B9%BB%E8%AF%BB%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">7.4.</span> <span class="toc-text">– 不可重复读和幻读有什么区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93%E5%B9%B6%E5%8F%91%E4%BA%8B%E5%8A%A1%E7%9A%84%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E2%98%85"><span class="toc-number">7.5.</span> <span class="toc-text">–并发事务的控制方式有哪些？★</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-SQL-%E6%A0%87%E5%87%86%E5%AE%9A%E4%B9%89%E4%BA%86%E5%93%AA%E4%BA%9B%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-number">7.6.</span> <span class="toc-text">– SQL 标准定义了哪些事务隔离级别?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MySQL-%E7%9A%84%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB%E6%98%AF%E5%9F%BA%E4%BA%8E%E9%94%81%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%90%97%EF%BC%9F"><span class="toc-number">7.7.</span> <span class="toc-text">– MySQL 的隔离级别是基于锁实现的吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MySQL-%E7%9A%84%E9%BB%98%E8%AE%A4%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">7.8.</span> <span class="toc-text">– MySQL 的默认隔离级别是什么?</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E9%94%81%E3%80%91"><span class="toc-number">8.</span> <span class="toc-text">【MySQL 锁】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E8%A1%A8%E7%BA%A7%E9%94%81%E5%92%8C%E8%A1%8C%E7%BA%A7%E9%94%81%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">8.1.</span> <span class="toc-text">– 表级锁和行级锁了解吗？有什么区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E8%A1%8C%E7%BA%A7%E9%94%81%E7%9A%84%E4%BD%BF%E7%94%A8%E6%9C%89%E4%BB%80%E4%B9%88%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%EF%BC%9F%EF%BC%9F"><span class="toc-number">8.2.</span> <span class="toc-text">– 行级锁的使用有什么注意事项？？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-InnoDB-%E6%9C%89%E5%93%AA%E5%87%A0%E7%B1%BB%E8%A1%8C%E9%94%81%EF%BC%9F"><span class="toc-number">8.3.</span> <span class="toc-text">– InnoDB 有哪几类行锁？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E5%85%B1%E4%BA%AB%E9%94%81%E5%92%8C%E6%8E%92%E4%BB%96%E9%94%81%E5%91%A2%EF%BC%9F"><span class="toc-number">8.4.</span> <span class="toc-text">– 共享锁和排他锁呢？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E6%84%8F%E5%90%91%E9%94%81%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-number">8.5.</span> <span class="toc-text">– 意向锁有什么作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E5%BD%93%E5%89%8D%E8%AF%BB%E5%92%8C%E5%BF%AB%E7%85%A7%E8%AF%BB%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">8.6.</span> <span class="toc-text">– 当前读和快照读有什么区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E8%87%AA%E5%A2%9E%E9%94%81%E6%9C%89%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F"><span class="toc-number">8.7.</span> <span class="toc-text">– 自增锁有了解吗？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90MySQL-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E3%80%91"><span class="toc-number">9.</span> <span class="toc-text">【MySQL 性能优化】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E8%83%BD%E7%94%A8-MySQL-%E7%9B%B4%E6%8E%A5%E5%AD%98%E5%82%A8%E6%96%87%E4%BB%B6%EF%BC%88%E6%AF%94%E5%A6%82%E5%9B%BE%E7%89%87%EF%BC%89%E5%90%97%EF%BC%9F"><span class="toc-number">9.1.</span> <span class="toc-text">– 能用 MySQL 直接存储文件（比如图片）吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-MySQL-%E5%A6%82%E4%BD%95%E5%AD%98%E5%82%A8-IP-%E5%9C%B0%E5%9D%80%EF%BC%9F"><span class="toc-number">9.2.</span> <span class="toc-text">– MySQL 如何存储 IP 地址？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E6%9C%89%E5%93%AA%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84-SQL-%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5%EF%BC%9F%E2%98%85"><span class="toc-number">9.3.</span> <span class="toc-text">– 有哪些常见的 SQL 优化手段？★</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E5%A6%82%E4%BD%95%E5%88%86%E6%9E%90-SQL-%E7%9A%84%E6%80%A7%E8%83%BD%EF%BC%9F%E2%98%86"><span class="toc-number">9.4.</span> <span class="toc-text">– 如何分析 SQL 的性能？☆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E5%92%8C%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F"><span class="toc-number">9.5.</span> <span class="toc-text">– 读写分离和分库分表了解吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E6%B7%B1%E5%BA%A6%E5%88%86%E9%A1%B5%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96%EF%BC%9F"><span class="toc-number">9.6.</span> <span class="toc-text">– 深度分页如何优化？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E6%95%B0%E6%8D%AE%E5%86%B7%E7%83%AD%E5%88%86%E7%A6%BB%E5%A6%82%E4%BD%95%E5%81%9A%EF%BC%9F"><span class="toc-number">9.7.</span> <span class="toc-text">– 数据冷热分离如何做？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%93-%E5%B8%B8%E8%A7%81%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E2%98%85"><span class="toc-number">9.8.</span> <span class="toc-text">– 常见的数据库优化方法有哪些？★</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number"></span> <span class="toc-text"></span></a></div></div><div class="author-info hide"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/blog_lyl/images/Java.png"></div><div class="author-info-name">lyl_L-</div><div class="author-info-description"></div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/SunRiseL135" target="_blank">GitHub<i class="icon-dot bg-color2"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/blog_lyl/archives"><span class="pull-top">日志</span><span class="pull-bottom">13</span></a><a class="author-info-articles-tags article-meta" href="/blog_lyl/tags"><span class="pull-top">标签</span><span class="pull-bottom">4</span></a><a class="author-info-articles-categories article-meta" href="/blog_lyl/categories"><span class="pull-top">分类</span><span class="pull-bottom">10</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/blog_lyl">首页</a><a class="menu-item" href="/blog_lyl/tags">标签</a><a class="menu-item" href="/blog_lyl/categories">分类</a><a class="menu-item" href="/blog_lyl/archives">归档</a><a class="menu-item" href="/blog_lyl/about">关于</a></nav><div class="right-info"><a class="title-name" href="/blog_lyl/">lyl'blog</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><article id="post"><div class="post-header"><div class="title">数据库面试-MySQL</div><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 发表于 2024-03-13 | 更新于 2024-03-13</time><!--time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]--><div class="button-hover categories"><i class="fa fa-inbox article-icon" aria-hidden="true"></i><a class="link-a" href="/blog_lyl/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></div><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/blog_lyl/tags/%E9%9D%A2%E8%AF%95/">面试</a></div></div></div><div class="main-content"><p>持续补充…</p>
 <span id="more"></span>
 
 
@@ -149,4 +149,277 @@ if (isPassword) {
 </li>
 </ol>
 <h4 id="–-MyISAM-和-InnoDB-如何选择？"><a href="#–-MyISAM-和-InnoDB-如何选择？" class="headerlink" title="– MyISAM 和 InnoDB 如何选择？"></a>– MyISAM 和 InnoDB 如何选择？</h4><p>大多数时候使用的都是 InnoDB 存储引擎，在某些<strong>读密集的情况</strong>下，使用 MyISAM 也是合适的。不过，前提是不介意 MyISAM 不支持事务、崩溃恢复等缺点（可是~我们一般都会介意！）。</p>
-<h3 id="【MySQL-索引】"><a href="#【MySQL-索引】" class="headerlink" title="【MySQL 索引】"></a>【MySQL 索引】</h3></div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-meta">本文作者: </span><span class="post-copyright-info"><a href="mailto:undefined">lyl_L-</a></span></div><div class="post-copyright-type"><span class="post-copyright-meta">本文链接: </span><span class="post-copyright-info"><a href="https://sunrisel135.github.io/blog_lyl/2024/03/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9D%A2%E8%AF%95-MySQL/">https://sunrisel135.github.io/blog_lyl/2024/03/13/数据库面试-MySQL/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-meta">本文声明: </span><span class="post-copyright-info">内容均为个人总结，仅供个人参考！</span></div></div></article><div id="pagination"><div class="prev-post pull-left"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/blog_lyl/2024/03/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9D%A2%E8%AF%95-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/"><i class="fas fa-angle-left">&nbsp;</i><span>数据库面试-数据库基础</span></a></div><div class="next-post pull-right"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/blog_lyl/2024/03/13/%E5%AD%97%E7%AC%A6%E9%9B%86/"><span>字符集</span><span>&nbsp;</span><i class="fas fa-angle-right"></i></a></div></div><!--div!= paginator()--></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fas fa-file-o"></i></span><span id="busuanzi_value_page_pv"></span><span></span></div><div class="copyright">&copy;2024 By lyl_L-</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/copy.js"></script><!--script(src=url)--></body></html>
+<h3 id="【MySQL-索引】"><a href="#【MySQL-索引】" class="headerlink" title="【MySQL 索引】"></a>【MySQL 索引】</h3><h4 id="–-索引介绍"><a href="#–-索引介绍" class="headerlink" title="– 索引介绍"></a>– 索引介绍</h4><p><strong>索引是一种用于快速查询和检索数据的数据结构，其本质可以看成是一种排序好的数据结构。</strong></p>
+<p>索引的作用就相当于书的目录。</p>
+<p>索引底层数据结构存在很多种类型，常见的索引结构有: <strong>B 树， B+树 和 Hash、红黑树</strong>。在 MySQL 中，无论是 <strong>Innodb</strong> 还是 <strong>MyIsam</strong>，都使用了 <strong>【B+树】</strong>作为索引结构，但是，两者的实现方式不太一样。</p>
+<h4 id="–-索引的优缺点"><a href="#–-索引的优缺点" class="headerlink" title="– 索引的优缺点"></a>– 索引的优缺点</h4><p><strong>优点</strong>：</p>
+<ul>
+<li>使用索引可以大大<strong>加快数据的检索速度</strong>（大大<strong>减少检索的数据量</strong>）, 这也是创建索引的最主要的原因。</li>
+<li>通过创建唯一性索引，可以保证数据库表中每一行数据的唯一性。</li>
+</ul>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li><strong>创建索引和维护索引</strong>需要<strong>耗费</strong>许多<strong>时间</strong>。当对表中的数据进行增删改的时候，如果数据有索引，那么索引也需要动态的修改，会降低 SQL 执行效率。</li>
+<li>索引需要使用物理文件存储，也会耗费一定空间。</li>
+</ul>
+<p><strong>使用索引一定能提高查询性能吗?</strong></p>
+<p>大多数情况下，索引查询都是比全表扫描要快的。但是如果数据库的数据量不大，那么使用索引也不一定能够带来很大提升。</p>
+<h4 id="–-索引底层数据结构选型"><a href="#–-索引底层数据结构选型" class="headerlink" title="– 索引底层数据结构选型"></a>– 索引底层数据结构选型</h4><h5 id="Hash-表"><a href="#Hash-表" class="headerlink" title="Hash 表"></a>Hash 表</h5><p>哈希表是键值对的集合，通过键(key)即可快速取出对应的值(value)，因此哈希表可以快速检索数据（接近 O（1））。</p>
+<ul>
+<li><p><strong>为何能够通过 key 快速取出 value 呢？</strong> </p>
+<p>原因在于 <strong>哈希算法</strong>（也叫散列算法）。通过哈希算法，我们可以快速找到 key 对应的 index，找到了 index 也就找到了对应的 value。</p>
+<p>出现<strong>Hash 冲突</strong> ，常用的解决办法是 <strong>链地址法</strong>。</p>
+</li>
+<li><p><strong>为什么 MySQL 没有使用其作为索引的数据结构呢？</strong></p>
+<p>主要是因为 Hash 索引不支持顺序和范围查询。</p>
+</li>
+</ul>
+<h5 id="二叉查找树-BST"><a href="#二叉查找树-BST" class="headerlink" title="二叉查找树(BST)"></a>二叉查找树(BST)</h5><p>二叉查找树（Binary Search Tree）是一种基于二叉树的数据结构，它具有以下特点：</p>
+<ol>
+<li>左子树所有节点的值均小于根节点的值。</li>
+<li>右子树所有节点的值均大于根节点的值。</li>
+<li>左右子树也分别为二叉查找树。</li>
+</ol>
+<p><strong>二叉查找树的性能非常依赖于它的平衡程度，这就导致其不适合作为 MySQL 底层索引的数据结构。</strong></p>
+<h5 id="AVL-树"><a href="#AVL-树" class="headerlink" title="AVL 树"></a>AVL 树</h5><p>AVL 树是最早被发明的<strong>自平衡二叉查找树</strong>，特点是保证<strong>任何节点的左右子树高度之差不超过 1</strong>，因此也被称为高度平衡二叉树，它的查找、插入和删除在平均和最坏情况下的时间复杂度都是 O(logn)。</p>
+<p>由于 AVL 树需要频繁地进行<strong>旋转操作</strong>来保持平衡，因此会有较大的计算开销进而降低了查询性能。并且， 在使用 AVL 树时，每个树节点仅存储一个数据，而每次进行磁盘 IO 时只能读取一个节点的数据，如果需要查询的数据分布在多个节点上，那么就需要进行多次磁盘 IO。 <strong>磁盘 IO 是一项耗时的操作，在设计数据库索引时，我们需要优先考虑如何最大限度地减少磁盘 IO 操作的次数。</strong></p>
+<p>实际应用中，AVL 树使用的并不多。</p>
+<h5 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h5><p>红黑树是一种<strong>自平衡二叉查找树</strong>，通过在插入和删除节点时进行<strong>颜色变换</strong>和<strong>旋转操作</strong>，使得树始终保持平衡状态，它具有以下特点：</p>
+<ol>
+<li>每个节点非红即黑；</li>
+<li><strong>根节点总是黑色的</strong>；</li>
+<li>每个<strong>叶子节点都是黑色的空节点</strong>（NIL 节点）；</li>
+<li>如果节点是红色的，则它的子节点必须是黑色的（反之不一定）；</li>
+<li>从根节点到叶节点或空子节点的每条路径，必须包含相同数目的黑色节点（即相同的黑色高度）。</li>
+</ol>
+<p><strong>红黑树的应用还是比较广泛的，TreeMap、TreeSet 以及 JDK1.8 的 HashMap 底层都用到了红黑树。对于数据在内存中的这种情况来说，红黑树的表现是非常优异的。</strong></p>
+<h5 id="B-树-B-树"><a href="#B-树-B-树" class="headerlink" title="B 树&amp; B+树"></a>B 树&amp; B+树</h5><p>B 树也称 B-树,全称为 <strong>多路平衡查找树</strong> ，B+ 树是 B 树的一种变体。B 树和 B+树中的 B 是 Balanced （平衡）的意思。<strong>目前大部分数据库系统及文件系统都采用 B-Tree 或其变种 B+Tree 作为索引结构。</strong></p>
+<p><strong>B 树&amp; B+树两者有何异同呢？</strong></p>
+<ul>
+<li><strong>B 树的所有节点既存放键(key) 也存放数据(data)<strong>，而 <strong>B+树只有叶子节点存放 key 和 data</strong>，其他</strong>内节点只存放 key</strong>。</li>
+<li>B 树的叶子节点都是独立的;<strong>B+树的叶子节点有一条引用链指向与它相邻的叶子节点</strong>。</li>
+<li>B 树的检索的过程相当于对范围内的每个节点的关键字做二分查找，可能还没有到达叶子节点，检索就结束了。而 B+树的检索效率就很稳定了，任何查找都是从根节点到叶子节点的过程，叶子节点的顺序检索很明显。</li>
+<li>在 B 树中进行范围查询时，首先找到要查找的下限，然后对 B 树进行中序遍历，直到找到查找的上限；而 B+树的范围查询，只需要对链表进行遍历即可。</li>
+</ul>
+<p>综上，B+树与 B 树相比，具备更少的 IO 次数、更稳定的查询效率和更适于范围查询这些优势。</p>
+<h4 id="–-索引类型总结"><a href="#–-索引类型总结" class="headerlink" title="– 索引类型总结"></a>– 索引类型总结</h4><p>按照<strong>数据结构维度</strong>划分：</p>
+<ul>
+<li><strong>BTree 索引</strong>：<strong>MySQL</strong> 里<strong>默认</strong>和最常用的索引类型。只有叶子节点存储 value，非叶子节点只有指针和 key。存储引擎 MyISAM 和 InnoDB 实现 BTree 索引都是使用 <strong>B+Tree</strong>。</li>
+<li>哈希索引：类似键值对的形式，一次即可定位。</li>
+<li>RTree 索引：一般不会使用，仅支持 geometry 数据类型，优势在于范围查找，效率较低，通常使用搜索引擎如 ElasticSearch 代替。</li>
+<li>全文索引：对文本的内容进行分词，进行搜索。目前只有 <code>CHAR</code>、<code>VARCHAR</code> ，<code>TEXT</code> 列上可以创建全文索引。一般不会使用，效率较低，通常使用搜索引擎如 ElasticSearch 代替。</li>
+</ul>
+<p>按照<strong>底层存储方式</strong>角度划分：</p>
+<ul>
+<li><p><strong>聚簇索引（聚集索引）</strong>：<strong>索引结构和数据一起存放的索引</strong>，InnoDB 中的<strong>主键索引</strong>就属于聚簇索引。</p>
+<p><strong>优点</strong>：</p>
+<ul>
+<li><strong>查询速度非常快</strong>：定位到索引的节点，就相当于定位到了数据。相比于非聚簇索引， 聚簇索引少了一次读取数据的 IO 操作。</li>
+<li><strong>对排序查找和范围查找优化</strong>：聚簇索引对于主键的排序查找和范围查找速度非常快。</li>
+</ul>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li><strong>依赖于有序的数据</strong>：因为 B+树是多路平衡树，如果索引的数据不是有序的，那么就需要在插入时排序，如果数据是整型还好，否则类似于字符串或 UUID 这种又长又难比较的数据，插入或查找的速度肯定比较慢。</li>
+<li><strong>更新代价大</strong>：如果对索引列的数据被修改时，那么对应的索引也将会被修改，而且聚簇索引的叶子节点还存放着数据，修改代价肯定是较大的，所以对于主键索引来说，主键一般都是不可被修改的。</li>
+</ul>
+</li>
+<li><p><strong>非聚簇索引（非聚集索引）</strong>：<strong>索引结构和数据分开存放的索引</strong>，<strong>二级索引</strong>(辅助索引)就属于非聚簇索引。MySQL 的 MyISAM 引擎，不管主键还是非主键，使用的都是非聚簇索引。</p>
+<p><strong>优点</strong>：</p>
+<p>更新代价比聚簇索引要小 。非聚簇索引的叶子节点是不存放数据的</p>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li><strong>依赖于有序的数据</strong>:跟聚簇索引一样，非聚簇索引也依赖于有序的数据</li>
+<li><strong>可能会二次查询(回表)</strong>:这应该是非聚簇索引最大的缺点了。 当查到索引对应的指针或主键后，可能还需要根据指针或主键再到数据文件或表中查询。</li>
+</ul>
+</li>
+</ul>
+<p>按照<strong>应用维度</strong>划分：</p>
+<ul>
+<li><p>主键索引：加速查询 + 列值唯一（不可以有 NULL）+ 表中只有一个。</p>
+</li>
+<li><p>普通索引：仅加速查询。</p>
+</li>
+<li><p>唯一索引：加速查询 + 列值唯一（可以有 NULL）。</p>
+</li>
+<li><p>覆盖索引：一个索引包含（或者说覆盖）所有需要查询的字段的值。</p>
+<p><strong>覆盖索引即需要查询的字段正好是索引的字段，那么直接根据该索引，就可以查到数据了，而无需回表查询。</strong></p>
+</li>
+<li><p>联合索引：多列值组成一个索引，专门用于组合搜索，其效率大于索引合并。</p>
+</li>
+<li><p>全文索引：对文本的内容进行分词，进行搜索。目前只有 <code>CHAR</code>、<code>VARCHAR</code> ，<code>TEXT</code> 列上可以创建全文索引。一般不会使用，效率较低，通常使用搜索引擎如 ElasticSearch 代替。</p>
+</li>
+</ul>
+<p>MySQL 8.x 中实现的索引新特性：</p>
+<ul>
+<li>隐藏索引：也称为不可见索引，不会被优化器使用，但是仍然需要维护，通常会软删除和灰度发布的场景中使用。主键不能设置为隐藏（包括显式设置或隐式设置）。</li>
+<li>降序索引：之前的版本就支持通过 desc 来指定索引为降序，但实际上创建的仍然是常规的升序索引。直到 MySQL 8.x 版本才开始真正支持降序索引。另外，在 MySQL 8.x 版本中，不再对 GROUP BY 语句进行隐式排序。</li>
+<li>函数索引：从 MySQL 8.0.13 版本开始支持在索引中使用函数或者表达式的值，也就是在索引中可以包含函数或者表达式。</li>
+</ul>
+<h4 id="–-非聚簇索引一定回表查询吗-覆盖索引"><a href="#–-非聚簇索引一定回表查询吗-覆盖索引" class="headerlink" title="– 非聚簇索引一定回表查询吗(覆盖索引)?"></a>– 非聚簇索引一定回表查询吗(覆盖索引)?</h4><p><strong>非聚簇索引不一定回表查询。</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">试想一种情况，用户准备使用 SQL 查询用户名，而用户名字段正好建立了索引。</span><br><span class="line">那么这个索引的 key 本身就是 name，查到对应的 name 直接返回就行了，无需回表查询。</span><br><span class="line">即使是 MYISAM 也是这样，虽然 MYISAM 的主键索引确实需要回表，因为它的主键索引的叶子节点存放的是指针。但是！如果 SQL 查的就是主键呢?</span><br><span class="line">主键索引本身的 key 就是主键，查到返回就行了。这种情况就称之为覆盖索引了。</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="–-最左前缀匹配原则-☆"><a href="#–-最左前缀匹配原则-☆" class="headerlink" title="– 最左前缀匹配原则 ☆"></a>– 最左前缀匹配原则 ☆</h4><p>在使用联合索引时，<strong>MySQL</strong> 会根据联合索引中的字段顺序，从左到右依次到查询条件中去匹配，如果查询条件中存在与联合索引中最左侧字段相匹配的字段，则就会使用该字段过滤一批数据，直至联合索引中全部字段匹配完成，或者在执行过程中遇到范围查询（如 <strong><code>&gt;</code><strong>、</strong><code>&lt;</code></strong> ）才会停止匹配。对于 <strong><code>&gt;=</code><strong>、</strong><code>&lt;=</code><strong>、</strong><code>BETWEEN</code><strong>、</strong><code>like</code></strong> 前缀匹配的范围查询，并不会停止匹配。所以，我们在使用联合索引时，可以将区分度高的字段放在最左边，这也可以过滤更多数据。</p>
+<h4 id="–-索引下推"><a href="#–-索引下推" class="headerlink" title="– 索引下推"></a>– 索引下推</h4><p>MySQL 5.6 版本中提供的一项索引优化功能，可以在非聚簇索引遍历过程中，对索引中包含的字段先做判断，过滤掉不符合条件的记录，减少回表次数。</p>
+<h4 id="–-正确使用索引"><a href="#–-正确使用索引" class="headerlink" title="– 正确使用索引"></a>– 正确使用索引</h4><h4 id="–-什么是慢查询？如何优化？"><a href="#–-什么是慢查询？如何优化？" class="headerlink" title="– 什么是慢查询？如何优化？"></a>– 什么是慢查询？如何优化？</h4><h3 id="【MySQL-查询缓存（不实用）】"><a href="#【MySQL-查询缓存（不实用）】" class="headerlink" title="【MySQL 查询缓存（不实用）】"></a>【MySQL 查询缓存（不实用）】</h3><p>执行查询语句的时候，会先查询缓存。不过，MySQL 8.0 版本后移除，因为这个功能不太实用。</p>
+<p>开启查询缓存后在同样的查询条件以及数据情况下，会直接在缓存中返回结果。</p>
+<p>缓存虽然能够提升数据库的查询性能，但是缓存同时也带来了额外的开销，每次查询后都要做一次缓存操作，失效后还要销毁。 </p>
+<h3 id="【MySQL-日志】"><a href="#【MySQL-日志】" class="headerlink" title="【MySQL 日志】"></a>【MySQL 日志】</h3><ul>
+<li>MySQL 中常见的日志有哪些？</li>
+<li>慢查询日志有什么用？</li>
+<li>binlog 主要记录了什么？</li>
+<li>redo log 如何保证事务的持久性？</li>
+<li>页修改之后为什么不直接刷盘呢？</li>
+<li>binlog 和 redolog 有什么区别？</li>
+<li>undo log 如何保证事务的原子性？</li>
+</ul>
+<h3 id="【MySQL-事务】"><a href="#【MySQL-事务】" class="headerlink" title="【MySQL 事务】"></a>【MySQL 事务】</h3><h4 id="–-何谓事务？"><a href="#–-何谓事务？" class="headerlink" title="– 何谓事务？"></a>– 何谓事务？</h4><ul>
+<li><strong>事务是逻辑上的一组操作，要么都执行，要么都不执行。</strong></li>
+</ul>
+<h4 id="–-何谓数据库事务？"><a href="#–-何谓数据库事务？" class="headerlink" title="– 何谓数据库事务？"></a>– 何谓数据库事务？</h4><ul>
+<li>如果没有特指分布式事务，往往指的就是数据库事务。</li>
+</ul>
+<h5 id="那数据库事务有什么作用呢？"><a href="#那数据库事务有什么作用呢？" class="headerlink" title="那数据库事务有什么作用呢？"></a>那数据库事务有什么作用呢？</h5><ul>
+<li><p>可以保证多个对数据库的操作（也就是 SQL 语句）构成一个逻辑上的整体。</p>
+</li>
+<li><p>数据库操作遵循：<strong>要么全部执行成功,要么全部不执行</strong> 。</p>
+</li>
+<li><p>另外，关系型数据库（例如：MySQL、SQL Server、Oracle 等）事务都有 <strong>ACID 特性</strong>：</p>
+<ul>
+<li><strong>原子性</strong>（<code>Atomicity</code>）：事务是最小的执行单位，不允许分割。事务的原子性确保动作要么全部完成，要么完全不起作用；</li>
+<li><strong>一致性</strong>（<code>Consistency</code>）：执行事务前后，数据保持一致，例如转账业务中，无论事务是否成功，转账者和收款人的总额应该是不变的；</li>
+<li><strong>隔离性</strong>（<code>Isolation</code>）：并发访问数据库时，一个用户的事务不被其他事务所干扰，各并发事务之间数据库是独立的；</li>
+<li><strong>持久性</strong>（<code>Durability</code>）：一个事务被提交之后。它对数据库中数据的改变是持久的，即使数据库发生故障也不应该对其有任何影响。</li>
+</ul>
+</li>
+<li><p><strong>只有保证了事务的持久性、原子性、隔离性之后，一致性才能得到保障。也就是说 A、I、D 是手段，C 是目的！</strong></p>
+</li>
+</ul>
+<h4 id="–-并发事务带来了哪些问题-☆"><a href="#–-并发事务带来了哪些问题-☆" class="headerlink" title="– 并发事务带来了哪些问题?☆"></a>– 并发事务带来了哪些问题?☆</h4><p>多个事务并发运行，经常会操作相同的数据来完成各自的任务（多个用户对同一数据进行操作）。</p>
+<ul>
+<li><p><strong>脏读（Dirty read）</strong></p>
+<p>读未提交。一个事务读取数据并进行了修改，<strong>还未提交，其他事务就能读到</strong>，读到的就是脏数据。</p>
+</li>
+<li><p><strong>丢失修改（Lost to modify）</strong></p>
+<p>一个事务读取一个数据时，另外一个事务也访问了该数据，那么在<strong>第一个事务修改了这个数据后，第二个事务也修改了这个数据。第一个事务内的修改结果就被丢失</strong>，因此称为丢失修改。</p>
+</li>
+<li><p><strong>不可重复读（Unrepeatable read）</strong></p>
+<p>指在一个事务内多次读同一数据。在这个事务还没有结束时，另一个事务也访问该数据。那么，在第一个事务中的两次读数据之间，由于<strong>第二个事务的修改导致第一个事务两次读取的数据可能不太一样</strong>。这就发生了在一个事务内两次读到的数据是不一样的情况，因此称为不可重复读。</p>
+</li>
+<li><p><strong>幻读（Phantom read）</strong></p>
+<p>一个事务读取了几行数据，接着<strong>另一个并发事务插入了一些数据</strong>时。在随后的查询中，<strong>第一个事务就会发现多了一些原本不存在的记录</strong>，就好像发生了幻觉一样，所以称为幻读。</p>
+</li>
+</ul>
+<h4 id="–-不可重复读和幻读有什么区别？"><a href="#–-不可重复读和幻读有什么区别？" class="headerlink" title="– 不可重复读和幻读有什么区别？"></a>– 不可重复读和幻读有什么区别？</h4><p>幻读其实可以看作是不可重复读的一种特殊情况，单独把区分幻读的原因主要是解决幻读和不可重复读的方案不一样。</p>
+<ul>
+<li><strong>不可重复读</strong>的重点是<strong>内容修改或者记录减少</strong>比如多次读取一条记录发现其中某些记录的值被修改；</li>
+<li><strong>幻读</strong>的重点在于<strong>记录新增</strong>比如多次执行同一条查询语句（DQL）时，发现查到的记录增加了。</li>
+</ul>
+<h4 id="–并发事务的控制方式有哪些？★"><a href="#–并发事务的控制方式有哪些？★" class="headerlink" title="–并发事务的控制方式有哪些？★"></a>–并发事务的控制方式有哪些？★</h4><p>两种：<strong>锁</strong> 和 <strong>MVCC</strong></p>
+<ol>
+<li><p><strong>锁</strong> 控制方式下会通过锁来<strong>显示控制共享资源</strong>而不是通过调度手段，MySQL 中主要是通过 <strong>读写锁</strong> 来实现并发控制。</p>
+<ul>
+<li><strong>共享锁（S 锁）</strong>：又称<strong>读锁</strong>，事务在读取记录的时候获取共享锁，<strong>允许多个事务同时获取</strong>（锁兼容）。</li>
+<li><strong>排他锁（X 锁）</strong>：又称<strong>写锁&#x2F;独占锁</strong>，事务在修改记录的时候获取排他锁，<strong>不允许多个事务同时获取</strong>。如果一个记录已经被加了排他锁，那<strong>其他事务不能再对这条记录加任何类型的锁</strong>（锁不兼容）。</li>
+<li>读写锁可以做到读读并行，但是无法做到写读、写写并行。另外，根据根据锁粒度的不同，又被分为 <strong>表级锁(table-level locking)</strong> 和 <strong>行级锁(row-level locking)</strong> 。</li>
+<li>InnoDB 不光支持表级锁，还支持行级锁，默认为行级锁。行级锁的粒度更小，仅对相关的记录上锁即可（对一行或者多行记录加锁），所以对于并发写入操作来说， InnoDB 的性能更高。不论是表级锁还是行级锁，都存在共享锁（Share Lock，S 锁）和排他锁（Exclusive Lock，X 锁）这两类。</li>
+</ul>
+</li>
+<li><p><strong>MVCC</strong> 是多版本并发控制方法，即对一份数据会存储多个版本，通过事务的可见性来保证事务能看到自己应该看到的版本。通常会有一个全局的版本分配器来为每一行数据设置版本号，版本号是唯一的。</p>
+<p>[乐观锁和 MVCC 的区别？-CSDN博客](<a target="_blank" rel="noopener" href="https://blog.csdn.net/dekejiao5921/article/details/102430442#:~:text=MVCC%EF%BC%88Multi-Version">https://blog.csdn.net/dekejiao5921/article/details/102430442#:~:text=MVCC（Multi-Version</a> Concurrent,Control），基于快照隔离机制 (Snapshot Isolations)进行多版本并发控制，是一种以乐观锁为理论基础的，用来解决读-写冲突的无锁并发控制。)</p>
+<p>MVCC 在 MySQL 中实现所依赖的手段主要是: <strong>隐藏字段、read view、undo log</strong>。</p>
+<ul>
+<li>undo log : undo log 用于记录某行数据的多个版本的数据。</li>
+<li>read view 和 隐藏字段 : 用来判断当前版本数据的可见性。</li>
+</ul>
+</li>
+</ol>
+<h4 id="–-SQL-标准定义了哪些事务隔离级别"><a href="#–-SQL-标准定义了哪些事务隔离级别" class="headerlink" title="– SQL 标准定义了哪些事务隔离级别?"></a>– SQL 标准定义了哪些事务隔离级别?</h4><ol>
+<li><strong>READ-UNCOMMITTED(读取未提交)</strong> ：最低的隔离级别，允许读取尚未提交的数据变更，可能会导致<strong>脏读、幻读或不可重复读</strong>。</li>
+<li><strong>READ-COMMITTED(读取已提交)</strong> ：允许读取并发事务已经提交的数据，可以<strong>阻止脏读</strong>，但是幻读或不可重复读仍有可能发生。</li>
+<li><strong>REPEATABLE-READ(可重复读)</strong> ：对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修改，可以<strong>阻止脏读和不可重复读</strong>，但幻读仍有可能发生。</li>
+<li><strong>SERIALIZABLE(可串行化)</strong> ：最高的隔离级别，完全服从 ACID 的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以<strong>防止脏读、不可重复读以及幻读</strong>。</li>
+</ol>
+<h4 id="–-MySQL-的隔离级别是基于锁实现的吗？"><a href="#–-MySQL-的隔离级别是基于锁实现的吗？" class="headerlink" title="– MySQL 的隔离级别是基于锁实现的吗？"></a>– MySQL 的隔离级别是基于锁实现的吗？</h4><p>MySQL 的隔离级别<strong>基于锁和 MVCC 机制共同实现</strong>的。</p>
+<p>SERIALIZABLE 隔离级别是通过锁来实现的，READ-COMMITTED 和 REPEATABLE-READ 隔离级别是基于 MVCC 实现的。不过， SERIALIZABLE 之外的其他隔离级别可能也需要用到锁机制，就比如 REPEATABLE-READ 在当前读情况下需要使用加锁读来保证不会出现幻读。</p>
+<h4 id="–-MySQL-的默认隔离级别是什么"><a href="#–-MySQL-的默认隔离级别是什么" class="headerlink" title="– MySQL 的默认隔离级别是什么?"></a>– MySQL 的默认隔离级别是什么?</h4><p><strong>REPEATABLE-READ（可重读）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">通过 SELECT @@tx_isolation; 命令来查看</span><br><span class="line"></span><br><span class="line">MySQL 8.0 该命令改为 SELECT @@transaction_isolation;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="【MySQL-锁】"><a href="#【MySQL-锁】" class="headerlink" title="【MySQL 锁】"></a>【MySQL 锁】</h3><p><strong>锁</strong>是一种常见的<strong>并发事务的控制方式</strong>。</p>
+<h4 id="–-表级锁和行级锁了解吗？有什么区别？"><a href="#–-表级锁和行级锁了解吗？有什么区别？" class="headerlink" title="– 表级锁和行级锁了解吗？有什么区别？"></a>– 表级锁和行级锁了解吗？有什么区别？</h4><ul>
+<li><p><strong>MyISAM</strong> 仅仅支持表级锁(table-level locking)，一<strong>锁就锁整张表</strong>，这在并发写的情况下性非常差。</p>
+<p><strong>InnoDB</strong> 不光支持表级锁(table-level locking)，还支持行级锁(row-level locking)，默认为行级锁。</p>
+</li>
+<li><p>行级锁的<strong>粒度更小</strong>，仅<strong>对相关的记录上锁即可</strong>（对一行或者多行记录加锁），所以对于<strong>并发写入操作</strong>来说， InnoDB 的性能更高。</p>
+</li>
+<li><p><strong>表级锁和行级锁对比</strong>：</p>
+<ul>
+<li><p><strong>表级锁：</strong> MySQL 中<strong>锁定粒度最大</strong>的一种锁（全局锁除外），是针对<strong>非索引字段加的锁</strong>，对当前操作的<strong>整张表加锁</strong>，实现简单，资源消耗也比较少，加锁快，不会出现死锁。不过，触发锁冲突的概率最高，高并发下效率极低。表级锁和存储引擎无关，MyISAM 和 InnoDB 引擎都支持表级锁。</p>
+</li>
+<li><p><strong>行级锁：</strong> MySQL 中锁<strong>定粒度最小</strong>的一种锁，是 <strong>针对索引字段加的锁</strong> ，只针对当前操作的行记录进行加锁。 行级锁能大大<strong>减少数据库操作的冲突</strong>。其加锁粒度最小，<strong>并发度高</strong>，但<strong>加锁的开销也最大，加锁慢，会出现死锁</strong>。行级锁和存储引擎有关，是在存储引擎层面实现的。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="–-行级锁的使用有什么注意事项？？"><a href="#–-行级锁的使用有什么注意事项？？" class="headerlink" title="– 行级锁的使用有什么注意事项？？"></a>– 行级锁的使用有什么注意事项？？</h4><p>当我们执行 <code>UPDATE</code>、<code>DELETE</code> 语句时，如果 <code>WHERE</code>条件中字段没有命中唯一索引或者索引失效的话，就会导致扫描全表对表中的所有行记录进行加锁。</p>
+<p>不过，很多时候即使用了索引也有可能会走全表扫描，这是因为 MySQL 优化器的原因。</p>
+<h4 id="–-InnoDB-有哪几类行锁？"><a href="#–-InnoDB-有哪几类行锁？" class="headerlink" title="– InnoDB 有哪几类行锁？"></a>– InnoDB 有哪几类行锁？</h4><p>InnoDB <strong>行锁</strong>是<strong>通过对索引数据页上的记录加锁实现</strong>的，MySQL InnoDB 支持三种行锁定方式：</p>
+<p><strong>记录锁（Record Lock）</strong>：也被称为记录锁，属于<strong>单个行记录</strong>上的锁。</p>
+<p><strong>间隙锁（Gap Lock）</strong>：锁定一个<strong>范围</strong>，不包括记录本身。</p>
+<p><strong>临键锁（Next-Key Lock）</strong>：Record Lock+Gap Lock，<strong>锁定一个范围，包含记录本</strong>身，主要目的是<strong>为了解决幻读</strong>问题（MySQL 事务部分提到过）。记录锁只能锁住已经存在的记录，为了避免插入新记录，需要依赖间隙锁。</p>
+<p><strong>在 InnoDB 默认的隔离级别 REPEATABLE-READ 下，行锁默认使用的是 Next-Key Lock。但是，如果操作的索引是唯一索引或主键，InnoDB 会对 Next-Key Lock 进行优化，将其降级为 Record Lock，即仅锁住索引本身，而不是范围。</strong></p>
+<h4 id="–-共享锁和排他锁呢？"><a href="#–-共享锁和排他锁呢？" class="headerlink" title="– 共享锁和排他锁呢？"></a>– 共享锁和排他锁呢？</h4><p>不论是表级锁还是行级锁，都存在共享锁（Share Lock，S 锁）和排他锁（Exclusive Lock，X 锁）这两类：</p>
+<ul>
+<li><strong>共享锁（S 锁）</strong>：又称读锁，事务在读取记录的时候获取共享锁，允许多个事务同时获取（锁兼容）。</li>
+<li><strong>排他锁（X 锁）</strong>：又称写锁&#x2F;独占锁，事务在修改记录的时候获取排他锁，不允许多个事务同时获取。如果一个记录已经被加了排他锁，那其他事务不能再对这条事务加任何类型的锁（锁不兼容）。</li>
+</ul>
+<h4 id="–-意向锁有什么作用？"><a href="#–-意向锁有什么作用？" class="headerlink" title="– 意向锁有什么作用？"></a>– 意向锁有什么作用？</h4><p>需要用到表锁的时，判断表中的记录有没有行锁。</p>
+<p>意向锁，<strong>快速判断是否可以对某个表使用表锁</strong>。</p>
+<ul>
+<li><strong>意向共享锁（Intention Shared Lock，IS 锁）</strong>：事务有意向对表中的某些记录加共享锁（S 锁），加共享锁前必须先取得该表的 IS 锁。</li>
+<li><strong>意向排他锁（Intention Exclusive Lock，IX 锁）</strong>：事务有意向对表中的某些记录加排他锁（X 锁），加排他锁之前必须先取得该表的 IX 锁。</li>
+</ul>
+<p>意向锁是由数据引擎自己维护的，用户无法手动操作意向锁，在为数据行加共享&#x2F;排他锁之前，InooDB 会先获取该数据行所在在数据表的对应意向锁。</p>
+<ul>
+<li>意向锁之间是互相兼容的。</li>
+<li>意向锁和共享锁和排它锁互斥（这里指的是表级别的共享锁和排他锁，意向锁不会与行级的共享锁和排他锁互斥）。</li>
+</ul>
+<h4 id="–-当前读和快照读有什么区别？"><a href="#–-当前读和快照读有什么区别？" class="headerlink" title="– 当前读和快照读有什么区别？"></a>– 当前读和快照读有什么区别？</h4><ul>
+<li><p><strong>快照读</strong>（一致性非锁定读）就是单纯的 <code>SELECT</code> 语句。</p>
+<p>快照即记录的历史版本，每行记录可能存在多个历史版本（多版本技术）。</p>
+</li>
+<li><p><strong>当前读</strong> （一致性锁定读）就是给行记录加 X 锁或 S 锁。</p>
+</li>
+</ul>
+<h4 id="–-自增锁有了解吗？"><a href="#–-自增锁有了解吗？" class="headerlink" title="– 自增锁有了解吗？"></a>– 自增锁有了解吗？</h4><p>InnoDB 中的自增主键会涉及一种比较特殊的表级锁— <strong>自增锁（AUTO-INC Locks）</strong> 。</p>
+<p>更准确点来说，不仅仅是自增主键，<code>AUTO_INCREMENT</code>的列都会涉及到自增锁，毕竟非主键也可以设置自增长。</p>
+<h3 id="【MySQL-性能优化】"><a href="#【MySQL-性能优化】" class="headerlink" title="【MySQL 性能优化】"></a>【MySQL 性能优化】</h3><h4 id="–-能用-MySQL-直接存储文件（比如图片）吗？"><a href="#–-能用-MySQL-直接存储文件（比如图片）吗？" class="headerlink" title="– 能用 MySQL 直接存储文件（比如图片）吗？"></a>– 能用 MySQL 直接存储文件（比如图片）吗？</h4><p>可以但不建议。会严重影响数据库性能，消耗过多存储空间。</p>
+<p>可以选择使用云服务厂商提供的开箱即用的文件存储服务。MinIO（推荐）</p>
+<p><strong>数据库只存储文件地址信息，文件由文件存储服务负责存储。</strong></p>
+<h4 id="–-MySQL-如何存储-IP-地址？"><a href="#–-MySQL-如何存储-IP-地址？" class="headerlink" title="– MySQL 如何存储 IP 地址？"></a>– MySQL 如何存储 IP 地址？</h4><p>可以将 <strong>IP 地址转换成整形数据存储</strong>，<strong>性能更好，占用空间也更小</strong>。</p>
+<p>MySQL 提供了两个方法来处理 ip 地址</p>
+<ul>
+<li><code>INET_ATON()</code>：把 ip 转为无符号整型 (4-8 位)</li>
+<li><code>INET_NTOA()</code> :把整型的 ip 转为地址</li>
+</ul>
+<p>插入数据前，先用 <code>INET_ATON()</code> 把 ip 地址转为整型，显示数据时，使用 <code>INET_NTOA()</code> 把整型的 ip 地址转为地址显示即可</p>
+<h4 id="–-有哪些常见的-SQL-优化手段？★"><a href="#–-有哪些常见的-SQL-优化手段？★" class="headerlink" title="– 有哪些常见的 SQL 优化手段？★"></a>– 有哪些常见的 SQL 优化手段？★</h4><h4 id="–-如何分析-SQL-的性能？☆"><a href="#–-如何分析-SQL-的性能？☆" class="headerlink" title="– 如何分析 SQL 的性能？☆"></a>– 如何分析 SQL 的性能？☆</h4><p>使用 <code>EXPLAIN</code> 命令来分析 SQL 的 <strong>执行计划</strong> 。执行计划是指一条 SQL 语句在经过 MySQL 查询优化器的优化会后，具体的执行方式。</p>
+<p><code>EXPLAIN</code> 并不会真的去执行相关的语句，而是通过 <strong>查询优化器</strong> 对语句进行分析，找出最优的查询方案，并显示对应的信息。</p>
+<p><code>EXPLAIN</code> 适用于 <code>SELECT</code>, <code>DELETE</code>, <code>INSERT</code>, <code>REPLACE</code>, 和 <code>UPDATE</code>语句，我们一般分析 <code>SELECT</code> 查询较多。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; EXPLAIN SELECT `score`,`name` FROM `cus_order` ORDER BY `score` DESC;</span><br><span class="line">+----+-------------+-----------+------------+------+---------------+------+---------+------+--------+----------+----------------+</span><br><span class="line">| id | select_type | table     | partitions | type | possible_keys | key  | key_len | ref  | rows   | filtered | Extra          |</span><br><span class="line">+----+-------------+-----------+------------+------+---------------+------+---------+------+--------+----------+----------------+</span><br><span class="line">|  1 | SIMPLE      | cus_order | NULL       | ALL  | NULL          | NULL | NULL    | NULL | 997572 |   100.00 | Using filesort |</span><br><span class="line">+----+-------------+-----------+------------+------+---------------+------+---------+------+--------+----------+----------------+</span><br><span class="line">1 row in set, 1 warning (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="–-读写分离和分库分表了解吗？"><a href="#–-读写分离和分库分表了解吗？" class="headerlink" title="– 读写分离和分库分表了解吗？"></a>– 读写分离和分库分表了解吗？</h4><h4 id="–-深度分页如何优化？"><a href="#–-深度分页如何优化？" class="headerlink" title="– 深度分页如何优化？"></a>– 深度分页如何优化？</h4><h4 id="–-数据冷热分离如何做？"><a href="#–-数据冷热分离如何做？" class="headerlink" title="– 数据冷热分离如何做？"></a>– 数据冷热分离如何做？</h4><h4 id="–-常见的数据库优化方法有哪些？★"><a href="#–-常见的数据库优化方法有哪些？★" class="headerlink" title="– 常见的数据库优化方法有哪些？★"></a>– 常见的数据库优化方法有哪些？★</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://javaguide.cn/database/mysql/mysql-index.html">索引优化</a></li>
+<li><a target="_blank" rel="noopener" href="https://javaguide.cn/high-performance/read-and-write-separation-and-library-subtable.html">读写分离和分库分表</a></li>
+<li><a target="_blank" rel="noopener" href="https://javaguide.cn/high-performance/data-cold-hot-separation.html">数据冷热分离</a></li>
+<li><a target="_blank" rel="noopener" href="https://javaguide.cn/high-performance/sql-optimization.html">SQL 优化</a></li>
+<li><a target="_blank" rel="noopener" href="https://javaguide.cn/high-performance/deep-pagination-optimization.html">深度分页优化</a></li>
+<li>适当冗余数据</li>
+<li>使用更高的硬件配置</li>
+</ul>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2></div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-meta">本文作者: </span><span class="post-copyright-info"><a href="mailto:undefined">lyl_L-</a></span></div><div class="post-copyright-type"><span class="post-copyright-meta">本文链接: </span><span class="post-copyright-info"><a href="https://sunrisel135.github.io/blog_lyl/2024/03/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9D%A2%E8%AF%95-MySQL/">https://sunrisel135.github.io/blog_lyl/2024/03/13/数据库面试-MySQL/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-meta">本文声明: </span><span class="post-copyright-info">内容均为个人总结，仅供个人参考！</span></div></div></article><div id="pagination"><div class="prev-post pull-left"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/blog_lyl/2024/03/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9D%A2%E8%AF%95-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/"><i class="fas fa-angle-left">&nbsp;</i><span>数据库面试-数据库基础</span></a></div><div class="next-post pull-right"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/blog_lyl/2024/03/13/%E5%AD%97%E7%AC%A6%E9%9B%86/"><span>字符集</span><span>&nbsp;</span><i class="fas fa-angle-right"></i></a></div></div><!--div!= paginator()--></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fas fa-file-o"></i></span><span id="busuanzi_value_page_pv"></span><span></span></div><div class="copyright">&copy;2024 By lyl_L-</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/copy.js"></script><!--script(src=url)--></body></html>
