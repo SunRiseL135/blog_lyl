@@ -1,3 +1,4 @@
+https://sunrisel135.github.io/blog_lyl/2024/03/15/Java%E6%A1%86%E6%9E%B6%E9%9D%A2%E8%AF%95-Spring/
 https://sunrisel135.github.io/blog_lyl/2024/03/14/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9D%A2%E8%AF%95-Redis/
 https://sunrisel135.github.io/blog_lyl/2024/03/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9D%A2%E8%AF%95-MySQL/
 https://sunrisel135.github.io/blog_lyl/2024/03/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9D%A2%E8%AF%95-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/
@@ -30,3 +31,4 @@ https://sunrisel135.github.io/blog_lyl/categories/SpringBoot/
 https://sunrisel135.github.io/blog_lyl/categories/JVM/
 https://sunrisel135.github.io/blog_lyl/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/
 https://sunrisel135.github.io/blog_lyl/categories/%E5%AD%97%E7%AC%A6%E9%9B%86%E8%AF%A6%E8%A7%A3/
+https://sunrisel135.github.io/blog_lyl/categories/Spring%E6%A1%86%E6%9E%B6/
