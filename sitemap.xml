@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/2024/03/16/Java%E6%A1%86%E6%9E%B6%E9%9D%A2%E8%AF%95-MyBatis/</loc>
+    
+    <lastmod>2024-03-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://sunrisel135.github.io/blog_lyl/2024/03/15/Java%E6%A1%86%E6%9E%B6%E9%9D%A2%E8%AF%95-SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86/</loc>
     
     <lastmod>2024-03-16</lastmod>
@@ -299,6 +308,13 @@
   
   <url>
     <loc>https://sunrisel135.github.io/blog_lyl/categories/Java%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2024-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/MyBatis/</loc>
     <lastmod>2024-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
