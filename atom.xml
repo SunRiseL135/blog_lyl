@@ -6,7 +6,7 @@
   <link href="https://sunrisel135.github.io/blog_lyl/atom.xml" rel="self"/>
   
   <link href="https://sunrisel135.github.io/blog_lyl/"/>
-  <updated>2024-03-15T08:22:27.666Z</updated>
+  <updated>2024-03-16T01:59:03.349Z</updated>
   <id>https://sunrisel135.github.io/blog_lyl/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java框架面试-SpringBoot自动装配原理</title>
+    <link href="https://sunrisel135.github.io/blog_lyl/2024/03/15/Java%E6%A1%86%E6%9E%B6%E9%9D%A2%E8%AF%95-SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86/"/>
+    <id>https://sunrisel135.github.io/blog_lyl/2024/03/15/Java%E6%A1%86%E6%9E%B6%E9%9D%A2%E8%AF%95-SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86/</id>
+    <published>2024-03-15T08:26:30.000Z</published>
+    <updated>2024-03-16T01:59:03.349Z</updated>
+    
+    <content type="html"><![CDATA[<p>可以从以下几个方面回答：</p><ol><li>什么是 SpringBoot 自动装配？</li><li>SpringBoot 是如何实现自动装配的？如何实现按需加载？</li><li>如何实现一个 Starter？</li></ol><p>参考：[浅谈SpringBoot自动装配 - 知乎 (zhihu.com)](<a href="https://zhuanlan.zhihu.com/p/619813073#:~:text=%E4%BB%80%E4%B9%88%E6%98%AF%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D">https://zhuanlan.zhihu.com/p/619813073#:~:text=什么是自动装配</a> 自动装配是指在不需要显式配置的情况下，Spring,Boot能够自动完成组件之间的依赖注入。 这种方式通过分析应用程序中的类路径，找到可以提供所需服务的Bean，并将它们自动地注入到目标Bean中，从而消除了手动配置的麻烦。)</p><span id="more"></span><h4 id="–-什么是-SpringBoot-自动装配？"><a href="#–-什么是-SpringBoot-自动装配？" class="headerlink" title="– 什么是 SpringBoot 自动装配？"></a>– 什么是 SpringBoot 自动装配？</h4><p>指<strong>在不需要显式配置的情况下，Spring Boot能够自动完成组件之间的依赖注入</strong>。这种方式通过分析应用程序中的类路径，找到可以提供所需服务的Bean，并将它们自动地注入到目标Bean中，从而消除了手动配置的麻烦。</p><ul><li>早在Spring Framework 就实现了这个功能。Spring Boot 只是在其基础上，通过 SPI 的方式，做了进一步优化。</li><li>没有 Spring Boot 的情况下，如果我们需要引入第三方依赖，需要手动配置，非常麻烦。但是，Spring Boot 中，我们直接引入一个 starter 即可。</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SpringBoot 定义了一套接口规范，这套规范规定：SpringBoot 在启动时会扫描外部引用 jar 包中的META-INF/spring.factories文件，将文件中配置的类型信息加载到 Spring 容器（此处涉及到 JVM 类加载机制与 Spring 的容器知识），并执行类中定义的各种操作。对于外部 jar 来说，只需要按照 SpringBoot 定义的标准，就能将自己的功能装置进 SpringBoot。</span><br></pre></td></tr></table></figure><h4 id="–-SpringBoot-是如何实现自动装配的？★"><a href="#–-SpringBoot-是如何实现自动装配的？★" class="headerlink" title="– SpringBoot 是如何实现自动装配的？★"></a>– SpringBoot 是如何实现自动装配的？★</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">总结：</span><br><span class="line">Spring Boot 通过 @EnableAutoConfiguration 开启自动装配，通过 SpringFactoriesLoader 最终加载 META-INF/spring.factories 中的自动配置类实现自动装配，自动配置类其实就是通过@Conditional按需加载的配置类，想要其生效必须引入spring-boot-starter-xxx包实现起步依赖。</span><br></pre></td></tr></table></figure><p>SpringBoot 的核心注解 <strong><code>SpringBootApplication</code></strong></p><p>可以把 <code>@SpringBootApplication</code>看作是 <code>@Configuration</code>、<code>@EnableAutoConfiguration</code>、<code>@ComponentScan</code> 注解的集合。</p><ul><li><code>@EnableAutoConfiguration</code>：<strong>启用 SpringBoot 的自动配置</strong>机制</li><li><code>@Configuration</code>：<strong>允许在上下文中注册额外的 bean 或导入其他配置</strong>类</li><li><code>@ComponentScan</code>：<strong>扫描</strong>被<code>@Component</code> (<code>@Service</code>,<code>@Controller</code>)注解的 bean，注解默认会扫描启动类所在的包下所有的类 ，可以自定义不扫描某些 bean。</li></ul><h5 id="EnableAutoConfiguration-实现自动装配的核心注解"><a href="#EnableAutoConfiguration-实现自动装配的核心注解" class="headerlink" title="@EnableAutoConfiguration:实现自动装配的核心注解"></a><code>@EnableAutoConfiguration</code>:实现自动装配的核心注解</h5><p>自动装配核心功能的实现实际是通过 <code>AutoConfigurationImportSelector</code>类。</p><h5 id="AutoConfigurationImportSelector-加载自动装配类"><a href="#AutoConfigurationImportSelector-加载自动装配类" class="headerlink" title="AutoConfigurationImportSelector:加载自动装配类"></a><code>AutoConfigurationImportSelector</code>:加载自动装配类</h5><p>根据此类的继承关系可以看出，<code>AutoConfigurationImportSelector</code> 类实现了 <code>ImportSelector</code>接口，也就实现了这个接口中的 <strong><code>selectImports</code>方法</strong>，该方法主要用于<strong>获取所有符合条件的类的全限定类名，这些类需要被加载到 IoC 容器中</strong>。</p><p>重点关注其方法中的**<code>getAutoConfigurationEntry()</code>方法**，这个方法主要负责加载自动配置类：</p><p><strong>第 1 步</strong>:</p><p>判断自动装配开关是否打开。默认<code>spring.boot.enableautoconfiguration=true</code>，可在 <code>application.properties</code> 或 <code>application.yml</code> 中设置</p><p><strong>第 2 步</strong>：</p><p>用于获取<code>EnableAutoConfiguration</code>注解中的 <code>exclude</code> 和 <code>excludeName</code>。</p><p><strong>第 3 步</strong></p><p>获取需要自动装配的所有配置类，读取<code>META-INF/spring.factories</code>。</p><p><code>XXXAutoConfiguration</code>的作用就是按需加载组件。</p><p>不光是这个依赖下的<code>META-INF/spring.factories</code>被读取到，所有 Spring Boot Starter 下的<code>META-INF/spring.factories</code>都会被读取到。</p><p>所以，你可以清楚滴看到， druid 数据库连接池的 Spring Boot Starter 就创建了<code>META-INF/spring.factories</code>文件。</p><p>如果，我们自己要创建一个 Spring Boot Starter，这一步是必不可少的。</p><p><strong>第 4 步</strong>：</p><p>筛选，<code>@ConditionalOnXXX</code> 中的所有条件都满足，该类才会生效。</p><h4 id="–-如何实现一个-Starter"><a href="#–-如何实现一个-Starter" class="headerlink" title="– 如何实现一个 Starter"></a>– 如何实现一个 Starter</h4><p>举例：实现自定义线程池</p><p>第一步，创建<code>threadpool-spring-boot-starter</code>工程</p><p>第二步，引入 Spring Boot 相关依赖</p><p>第三步，<strong>创建<code>ThreadPoolAutoConfiguration</code></strong></p><p>第四步，<strong>在<code>threadpool-spring-boot-starter</code>工程的 resources 包下创建<code>META-INF/spring.factories</code>文件</strong></p><p>最后新建工程引入<code>threadpool-spring-boot-starter</code></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;可以从以下几个方面回答：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什么是 SpringBoot 自动装配？&lt;/li&gt;
+&lt;li&gt;SpringBoot 是如何实现自动装配的？如何实现按需加载？&lt;/li&gt;
+&lt;li&gt;如何实现一个 Starter？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参考：[浅谈SpringBoot自动装配 - 知乎 (zhihu.com)](&lt;a href=&quot;https://zhuanlan.zhihu.com/p/619813073#:~:text=%E4%BB%80%E4%B9%88%E6%98%AF%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D&quot;&gt;https://zhuanlan.zhihu.com/p/619813073#:~:text=什么是自动装配&lt;/a&gt; 自动装配是指在不需要显式配置的情况下，Spring,Boot能够自动完成组件之间的依赖注入。 这种方式通过分析应用程序中的类路径，找到可以提供所需服务的Bean，并将它们自动地注入到目标Bean中，从而消除了手动配置的麻烦。)&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="SpringBoot" scheme="https://sunrisel135.github.io/blog_lyl/categories/SpringBoot/"/>
+    
+    
+    <category term="面试" scheme="https://sunrisel135.github.io/blog_lyl/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring&amp;SpringBoot常用注解总结</title>
