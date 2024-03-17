@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/2024/03/17/Knife4j-SPI%E6%96%87%E6%A1%A3%E7%94%9F%E6%88%90/</loc>
+    <loc>https://sunrisel135.github.io/blog_lyl/2024/03/17/Knife4j-API%E6%96%87%E6%A1%A3%E7%94%9F%E6%88%90/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -232,14 +232,7 @@
   </url>
   
   <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/tags/%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2024-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
+    <loc>https://sunrisel135.github.io/blog_lyl/tags/Knife4j/</loc>
     <lastmod>2024-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -253,7 +246,14 @@
   </url>
   
   <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/tags/Knife4j/</loc>
+    <loc>https://sunrisel135.github.io/blog_lyl/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
+    <lastmod>2024-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/tags/%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2024-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -269,7 +269,35 @@
   </url>
   
   <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/MyBatis/</loc>
+    <lastmod>2024-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/Spring%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2024-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/SpringBoot/</loc>
+    <lastmod>2024-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://sunrisel135.github.io/blog_lyl/categories/Java-IO/</loc>
+    <lastmod>2024-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/JVM/</loc>
     <lastmod>2024-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -297,42 +325,7 @@
   </url>
   
   <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/categories/Spring/</loc>
-    <lastmod>2024-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/categories/SpringBoot/</loc>
-    <lastmod>2024-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/categories/JVM/</loc>
-    <lastmod>2024-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2024-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/categories/%E5%AD%97%E7%AC%A6%E9%9B%86%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2024-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/categories/Spring%E6%A1%86%E6%9E%B6/</loc>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2024-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -346,14 +339,21 @@
   </url>
   
   <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/categories/MyBatis/</loc>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/Spring/</loc>
     <lastmod>2024-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://sunrisel135.github.io/blog_lyl/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</loc>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/%E5%AD%97%E7%AC%A6%E9%9B%86%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2024-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2024-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
