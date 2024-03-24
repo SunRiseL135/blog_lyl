@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="nginx的使用"><meta name="keywords" content="教程"><meta name="author" content="lyl_L-,undefined"><meta name="copyright" content="lyl_L-"><title>nginx的使用【lyl'blog】</title><link rel="stylesheet" href="/blog_lyl/css/fan.css"><link rel="stylesheet" href="/blog_lyl/css/thirdparty/jquery.mCustomScrollbar.min.css"><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"><link rel="icon" href="/blog_lyl/L.ico"><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- script(src=url_for("/js/mathjax/mathjax.js"))--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+});
+</script><script>var isPassword = '' || false;
+if (isPassword) {
+    if (prompt('请输入文章密码') !== '') {
+        alert('密码错误！');
+        history.back();
+    }
+}</script><script>window.GLOBAL_CONFIG = {
+  root: '/blog_lyl/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  gitment: {},
+  valine: {},
+  twikoo: {},
+}</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog_lyl/atom.xml" title="lyl'blog" type="application/atom+xml">
+</head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="toggle-sidebar-info button-hover"><span data-toggle="文章目录">站点概览</span></div><div class="sidebar-toc"><div class="sidebar-toc-title">目录</div><div class="sidebar-toc-progress"><span class="progress-notice">您已阅读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc-progress-bar"></div></div><div class="sidebar-toc-content" id="sidebar-toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFNginx%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">什么是Nginx？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nginx%E7%9A%84%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%EF%BC%88%E6%89%A9%E5%B1%95%EF%BC%9A%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">Nginx的反向代理（扩展：正向代理）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="toc-number">3.</span> <span class="toc-text">Nginx的负载均衡</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%EF%BC%9F"><span class="toc-number">3.1.</span> <span class="toc-text">什么是负载均衡？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Nginx%E4%B8%89%E7%A7%8D%E5%85%B3%E4%BA%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.</span> <span class="toc-text">Nginx三种关于负载均衡的方式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nginx%E7%9A%84%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">Nginx的动静分离？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nginx%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">Nginx的安装使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#windows%E7%89%88%E6%9C%AC"><span class="toc-number">5.1.</span> <span class="toc-text">windows版本</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Linux%E7%89%88%E6%9C%AC%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8"><span class="toc-number">5.2.</span> <span class="toc-text">Linux版本下的安装使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Linux%E4%B8%8Bdocker%E9%83%A8%E7%BD%B2nignx"><span class="toc-number">5.3.</span> <span class="toc-text">Linux下docker部署nignx</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/blog_lyl/images/Java.png"></div><div class="author-info-name">lyl_L-</div><div class="author-info-description"></div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/SunRiseL135" target="_blank">GitHub<i class="icon-dot bg-color8"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/blog_lyl/archives"><span class="pull-top">日志</span><span class="pull-bottom">23</span></a><a class="author-info-articles-tags article-meta" href="/blog_lyl/tags"><span class="pull-top">标签</span><span class="pull-bottom">6</span></a><a class="author-info-articles-categories article-meta" href="/blog_lyl/categories"><span class="pull-top">分类</span><span class="pull-bottom">17</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/blog_lyl">首页</a><a class="menu-item" href="/blog_lyl/tags">标签</a><a class="menu-item" href="/blog_lyl/categories">分类</a><a class="menu-item" href="/blog_lyl/archives">归档</a><a class="menu-item" href="/blog_lyl/about">关于</a></nav><div class="right-info"><a class="title-name" href="/blog_lyl/">lyl'blog</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><article id="post"><div class="post-header"><div class="title">nginx的使用</div><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 发表于 2024-03-24 | 更新于 2024-03-24</time><!--time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]--><div class="button-hover categories"><i class="fa fa-inbox article-icon" aria-hidden="true"></i><a class="link-a" href="/blog_lyl/categories/nginx/">nginx</a></div><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/blog_lyl/tags/%E6%95%99%E7%A8%8B/">教程</a></div></div></div><div class="main-content"><p>参考于：<a target="_blank" rel="noopener" href="https://blog.csdn.net/hyfsbxg/article/details/122322125">Nginx详解（一文带你搞懂Nginx）-CSDN博客</a></p>
+<span id="more"></span>
+
+<h4 id="什么是Nginx？"><a href="#什么是Nginx？" class="headerlink" title="什么是Nginx？"></a>什么是Nginx？</h4><ul>
+<li>Nginx 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP&#x2F;POP3&#x2F;SMTP服务。</li>
+<li>Nginx是一款<strong>轻量级</strong>的Web 服务器&#x2F;反向代理服务器及电子邮件（IMAP&#x2F;POP3）代理服务器，在BSD-like 协议下发行。其特点是<strong>占有内存少，并发能力强</strong>。</li>
+<li>Nginx 是高性能的 HTTP 和反向代理的web服务器，处理高并发能力是十分强大的，能经受高负 载的考验,有报告表明能支持高达 50,000 个并发连接数。</li>
+<li>Nginx支持热部署，启动简单，可以做到7*24不间断运行。几个月都不需要重新启动。</li>
+</ul>
+<h4 id="Nginx的反向代理（扩展：正向代理）"><a href="#Nginx的反向代理（扩展：正向代理）" class="headerlink" title="Nginx的反向代理（扩展：正向代理）"></a>Nginx的反向代理（扩展：正向代理）</h4><ul>
+<li><p><strong>正向代理：</strong></p>
+<p>直接用国内的服务器无法访问国外的服务器，或者是访问很慢。所以我们需要<strong>在本地搭建一个服务器来帮助我们去访问</strong>。那这种就是正向代理。（<strong>浏览器中配置代理服务器</strong>）</p>
+</li>
+<li><p><strong>反向代理：</strong></p>
+<p>比如：我们访问淘宝的时候，淘宝内部肯定不是只有一台服务器，它的内部有很多台服务器，那我们进行访问的时候，因为服务器中间session不共享，那我们是不是在服务器之间访问需要频繁登录，那这个时候淘宝搭建一个过渡服务器，对我们是没有任何影响的，我们是登录一次，但是访问所有，这种情况就是 <strong>反向代理</strong>。对我们来说，客户端对代理是无感知的，客户端不需要任何配置就可以访问，我们只需要把请求发送给反向代理服务器，由反向代理服务器去选择目标服务器获取数据后，再返回给客户端，此时反向代理服务器和目标服务器对外就是一个服务器，<strong>暴露的是代理服务器地址，隐藏了真实服务器的地址</strong>。（<strong>在服务器中配置代理服务器</strong>）</p>
+</li>
+</ul>
+<h4 id="Nginx的负载均衡"><a href="#Nginx的负载均衡" class="headerlink" title="Nginx的负载均衡"></a>Nginx的负载均衡</h4><h5 id="什么是负载均衡？"><a href="#什么是负载均衡？" class="headerlink" title="什么是负载均衡？"></a>什么是负载均衡？</h5><p>负载均衡建立在现有网络结构之上，它提供了一种廉价有效透明的方法扩展网络设备和服务器的带宽、增加吞吐量、加强网络数据处理能力、提高网络的灵活性和可用性。<br><strong>负载均衡（Load Balance）</strong>其意思就是分摊到多个操作单元上进行执行，例如Web服务器、FTP服务器、企业关键应用服务器和其它关键任务服务器等，从而共同完成工作任务。</p>
+<p>现有的请求使服务器压力太大无法承受，所有我们需要搭建一个服务器集群，去分担原先一个服务器所承受的压力，那现在我们有ABCD等等多台服务器，我们需要把请求分给这些服务器，但是服务器可能大小也有自己的不同，所以<strong>怎么分？</strong>如何分配更好？Nginx给出来三种关于负载均衡的方式。</p>
+<h5 id="Nginx三种关于负载均衡的方式"><a href="#Nginx三种关于负载均衡的方式" class="headerlink" title="Nginx三种关于负载均衡的方式"></a>Nginx三种关于负载均衡的方式</h5><ol>
+<li>轮询法（默认方法）：<br>每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除。<br>适合服务器配置相当，无状态且短平快的服务使用。也适用于图片服务器集群和纯静态页面服务器集群。</li>
+<li>weight权重模式（加权轮询）：<br>指定轮询几率，weight和访问比率成正比，用于后端服务器性能不均的情况。<br>这种方式比较灵活，当后端服务器性能存在差异的时候，通过配置权重，可以让服务器的性能得到充分发挥，有效利用资源。weight和访问比率成正比，用于后端服务器性能不均的情况。权重越高，在被访问的概率越大</li>
+<li>ip_hash：<br>上述方式存在一个问题就是说，在负载均衡系统中，假如用户在某台服务器上登录了，那么该用户第二次请求的时候，因为我们是负载均衡系统，每次请求都会重新定位到服务器集群中的某一个，那么已经登录某一个服务器的用户再重新定位到另一个服务器，其登录信息将会丢失，这样显然是不妥的。<br>我们可以采用ip_hash指令解决这个问题，如果客户已经访问了某个服务器，当用户再次访问时，会将该请求通过哈希算法，自动定位到该服务器。每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题。</li>
+</ol>
+<h4 id="Nginx的动静分离？"><a href="#Nginx的动静分离？" class="headerlink" title="Nginx的动静分离？"></a>Nginx的动静分离？</h4><p>Nginx的静态处理能力很强，但是动态处理能力不足，因此，在企业中常用动静分离技术。</p>
+<h4 id="Nginx的安装使用"><a href="#Nginx的安装使用" class="headerlink" title="Nginx的安装使用"></a>Nginx的安装使用</h4><h5 id="windows版本"><a href="#windows版本" class="headerlink" title="windows版本"></a>windows版本</h5><ol>
+<li><p><strong>下载</strong></p>
+<p>官网下载对应压缩包解压即可。</p>
+</li>
+<li><p><strong>启动</strong></p>
+<p><strong>启动方式一</strong>：双击nginx.exe，双击后你能看见一个小黑窗口一闪而过。<br><strong>启动方式二</strong>【<strong>推荐</strong>】：打开cmd命令窗口，切换到nginx解压目录下，输入命令 nginx.exe ，回车即可</p>
+<p><strong>注意</strong>：如果安装目录是中文的情况，打开exe文件时会报错。</p>
+</li>
+<li><p><strong>检查是否安装成功</strong></p>
+<p>打开浏览器：浏览器地址栏输入网址 <a target="_blank" rel="noopener" href="http://localhost/">http://localhost:80</a> 回车(端口号可省略)，出现页面即可说明启动成功！</p>
+</li>
+<li><p><strong>配置监听</strong></p>
+<p>nginx的配置文件是conf目录下的<strong>nginx.conf</strong>，默认配置的nginx监听的端口为80，如果80端口被占用可以修改为未被占用的端口即可。<br>当我们修改了nginx的配置文件nginx.conf 时，<strong>不需要关闭nginx后重新启动nginx</strong>，只需要执行命令 <code>nginx -s reload</code> 即可让改动生效</p>
+</li>
+<li><p><strong>关闭Nginx</strong></p>
+<p>如果使用cmd命令窗口启动nginx， 关闭cmd窗口是不能结束nginx进程的，可使用两种方法关闭nginx<br><strong>方法一</strong>：(1)输入nginx命令 <code>nginx -s stop</code>(快速停止nginx) 或 <code>nginx -s quit</code>(完整有序的停止nginx)，这两个命令的区别在于nginx -s stop是快速停止Nginx，而nginx -s quit是有序的停止Nginx，前者可能会导致数据没有完全保存；</p>
+<p><strong>方法二</strong>：(2)使用<code>taskkill taskkill /f /t /im nginx.exe</code></p>
+<p><strong>注意</strong>：方法一必须要在Nginx的安装包目录下。否则无法找到Nginx。</p>
+<p>这种方法可以直接在cmd命令面板上使用，当第一种方法无效时可以尝试使用此方法，前第一种方法适用于大部分版本的Nginx，但是个别版本的可能不实用，使用taskkill就可解决。</p>
+<p>适用于大部分版本的Nginx，但是个别版本的可能不实用，使用taskkill就可解决。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注解：taskkill是用来终止进程的，/f是强制终止 /t终止指定的进程和任何由此启动的子进程    						 /im 指定的进程名称</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h5 id="Linux版本下的安装使用"><a href="#Linux版本下的安装使用" class="headerlink" title="Linux版本下的安装使用"></a>Linux版本下的安装使用</h5><ol>
+<li><p><strong>下载</strong></p>
+<p>下载安装包：下载完毕上传到服务器上 &#x2F;root</p>
+</li>
+<li><p><strong>解压</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf nginx-1.18.0.tar.gzcd nginx-1.18.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>配置</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configuremakemake install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>启动</strong></p>
+<p>进入到安装的目录里面 <code>whereis nginx</code></p>
+<p>进入该路径：<code>cd  /usr/local/nginx/sbin</code></p>
+<p>启动nginx 命令： <code>./nginx</code> </p>
+<p>查看nginx 的状态 <code>ps -ef | grep nginx</code> 出现master 则启动成功</p>
+<p>关闭nginx 命令 <code>kill -9 8725(进程号 上面的)</code>  则关闭nginx </p>
+<p>停止 nginx 命令： <code>./nginx -s stop</code> </p>
+<p>重启nginx命令：<code>./nginx -s reload</code></p>
+<p>启动成功访问 服务器ip:80</p>
+<p><strong>注意</strong>：如何连接不上，检查阿里云安全组是否开放端口，或者<strong>服务器防火墙</strong>是否开放端口！<br>相关命令：</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/ysyut/article/details/113519541">关于Linux下启动Nginx服务后，浏览器却不能访问-CSDN博客</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 开启service firewalld start</span><br><span class="line"># 重启service firewalld restart</span><br><span class="line"># 关闭service firewalld stop</span><br><span class="line"># 查看防火墙规则firewall-cmd --list-all</span><br><span class="line"># 查询端口是否开放firewall-cmd --query-port=8080/tcp</span><br><span class="line"># 开放80端口firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"># 移除端口firewall-cmd --permanent --remove-port=8080/tcp#重启防火墙(修改配置后要重启防火墙)firewall-cmd --reload</span><br><span class="line"># 参数解释1、firwall-cmd：是Linux提供的操作firewall的一个工具；2、--permanent：表</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Nginx常用命令</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/sbin/</span><br><span class="line">./nginx  启动</span><br><span class="line">./nginx -s stop  停止</span><br><span class="line">./nginx -s quit  安全退出</span><br><span class="line">./nginx -s reload  重新加载配置文件  如果我们修改了配置文件，就需要重新加载。</span><br><span class="line">ps aux|grep nginx  查看nginx进程</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h5 id="Linux下docker部署nignx"><a href="#Linux下docker部署nignx" class="headerlink" title="Linux下docker部署nignx"></a>Linux下docker部署nignx</h5><p>h5为一个写好的前端。</p>
+<p>1、docker部署nignx</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">拉取镜像</span></span><br><span class="line">docker pull nginx:latest</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">运行nginx镜像</span></span><br><span class="line">docker run -d -p 80:80 \</span><br><span class="line">--name nginx-yph \</span><br><span class="line">-v nginx_html:/usr/share/nginx/html \</span><br><span class="line">-v nginx_conf:/etc/nginx/ \</span><br><span class="line">-v nginx_logs:/var/log/nginx  nginx</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">nginx-spzx容器的管理命令</span></span><br><span class="line">docker start nginx-yph			# 启动容器</span><br><span class="line">docker stop nginx-yph			# 关闭容器</span><br><span class="line">docker rm nginx-yph			# 删除容器</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">使用浏览器访问测试：http://ip</span></span><br></pre></td></tr></table></figure>
+
+<p>2、部署yph-h5</p>
+<p>删除<code>/var/lib/docker/volumes/nginx_html/_data</code>目录下的文件，将h5目录下的文件上传到该目录下。</p>
+<p>浏览器访问：<a target="_blank" rel="noopener" href="http://ip,打开手机模式/">http://ip，打开手机模式</a></p>
+<p>3、H5调用本地接口设置</p>
+<p>我的 &#x3D;&gt; 设置 &#x3D;》 接口base路径，改为本地网关地址：<a href="http://IP:端口">http://IP:端口</a></p>
+</div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-meta">本文作者: </span><span class="post-copyright-info"><a href="mailto:undefined">lyl_L-</a></span></div><div class="post-copyright-type"><span class="post-copyright-meta">本文链接: </span><span class="post-copyright-info"><a href="https://sunrisel135.github.io/blog_lyl/2024/03/24/nginx%E7%9A%84%E4%BD%BF%E7%94%A8/">https://sunrisel135.github.io/blog_lyl/2024/03/24/nginx的使用/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-meta">本文声明: </span><span class="post-copyright-info">内容均为个人总结，仅供个人参考！</span></div></div></article><div id="pagination"><div class="next-post pull-right"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/blog_lyl/2024/03/24/github-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0/"><span>github-项目上传</span><span>&nbsp;</span><i class="fas fa-angle-right"></i></a></div></div><!--div!= paginator()--></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fas fa-file-o"></i></span><span id="busuanzi_value_page_pv"></span><span></span></div><div class="copyright">&copy;2024 By lyl_L-</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/blog_lyl/js/copy.js"></script><!--script(src=url)--></body></html>

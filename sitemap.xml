@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/2024/03/24/nginx%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2024-03-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://sunrisel135.github.io/blog_lyl/2024/03/24/github-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0/</loc>
     
     <lastmod>2024-03-24</lastmod>
@@ -386,6 +395,13 @@
   
   <url>
     <loc>https://sunrisel135.github.io/blog_lyl/categories/github/</loc>
+    <lastmod>2024-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sunrisel135.github.io/blog_lyl/categories/nginx/</loc>
     <lastmod>2024-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
