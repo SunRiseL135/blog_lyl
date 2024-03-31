@@ -1,1 +1,1 @@
-Hexo + github page (个人博客)
+Hexo + GitHub Pages (个人博客)
